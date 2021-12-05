@@ -1,0 +1,26 @@
+@import "config";
+
+header {
+  font-family: Dosis-Medium;
+  font-size: 16px;
+
+  border-bottom: 1px solid #1f1f1f;
+  position: sticky;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+ul {
+  list-style-type: none;
+  width: 600px;
+  margin: 0px;
+  padding: 20px 0px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

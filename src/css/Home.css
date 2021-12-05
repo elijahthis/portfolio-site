@@ -1,0 +1,125 @@
+@font-face {
+  font-family: Dosis-Regular;
+  src: url(../fonts/Dosis/static/Dosis-Regular.ttf);
+}
+
+@font-face {
+  font-family: Dosis-Bold;
+  src: url(../fonts/Dosis/static/Dosis-Bold.ttf);
+}
+
+@font-face {
+  font-family: Dosis-Medium;
+  src: url(../fonts/Dosis/static/Dosis-Medium.ttf);
+}
+
+@-webkit-keyframes rotateIt {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIt {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-webkit-keyframes show {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes show {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+main {
+  height: 620px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url();
+}
+
+.my-1 {
+  font-size: 50px;
+  margin: 0px;
+  font-family: Dosis-Regular;
+  -webkit-animation: rotateIt 1.5s 3;
+          animation: rotateIt 1.5s 3;
+}
+
+.my-2 {
+  font-size: 100px;
+  margin: 0px;
+  font-family: Dosis-Medium;
+  -webkit-animation: show 1s 5s forwards, typing 2s 5s steps(6), blink 0.5s step-end infinite alternate;
+          animation: show 1s 5s forwards, typing 2s 5s steps(6), blink 0.5s step-end infinite alternate;
+  border-right: 3px solid;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 6ch;
+  font-family: monospace;
+  opacity: 1;
+  visibility: hidden;
+}
+
+.big-div {
+  text-align: center;
+  padding: 50px;
+  border-radius: 10%;
+}

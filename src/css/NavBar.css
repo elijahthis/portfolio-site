@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Dosis-Regular;
+  src: url(../fonts/Dosis/static/Dosis-Regular.ttf);
+}
+
+@font-face {
+  font-family: Dosis-Bold;
+  src: url(../fonts/Dosis/static/Dosis-Bold.ttf);
+}
+
+@font-face {
+  font-family: Dosis-Medium;
+  src: url(../fonts/Dosis/static/Dosis-Medium.ttf);
+}
+
+header {
+  font-family: Dosis-Medium;
+  font-size: 16px;
+  border-bottom: 1px solid #1f1f1f;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+ul {
+  list-style-type: none;
+  width: 600px;
+  margin: 0px;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}

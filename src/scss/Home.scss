@@ -1,0 +1,74 @@
+@import "config";
+
+@keyframes rotateIt {
+  from {
+    // transform: rotate(0deg);
+    scale: 0;
+    opacity: 0;
+  }
+  to {
+    // transform: rotate(360deg);
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes show {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+main {
+  height: 620px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url();
+}
+
+.my-1 {
+  font-size: 50px;
+  margin: 0px;
+  font-family: Dosis-Regular;
+
+  animation: rotateIt 1.5s 3;
+}
+.my-2 {
+  font-size: 100px;
+  margin: 0px;
+  font-family: Dosis-Medium;
+  animation: show 1s 5s forwards, typing 2s 5s steps(6),
+    blink 0.5s step-end infinite alternate;
+  border-right: 3px solid;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 6ch;
+  font-family: monospace;
+  opacity: 1;
+  visibility: hidden;
+}
+
+.big-div {
+  text-align: center;
+  //   border: 1px solid black;
+  padding: 50px;
+  border-radius: 10%;
+
+  //   animation: rotateIt 1s;
+}
