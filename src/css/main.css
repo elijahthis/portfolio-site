@@ -13,6 +13,126 @@
   src: url(../fonts/Dosis/static/Dosis-Medium.ttf);
 }
 
+@font-face {
+  font-family: Nicolatte;
+  src: url(../fonts/NICOLATTE.ttf);
+}
+
+@font-face {
+  font-family: Apercu Mono;
+  src: url(../fonts/ApercuMono.ttf);
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+}
+
 :root {
   font-family: Dosis-Medium;
+  --main-col: #000000;
+  --main-bg: #ffffff;
+  --padding-val: 40px;
+  --other-col: #3137dc;
+  color: var(--main-col);
+  background-color: var(--main-bg);
+}
+
+h1 {
+  font-family: Nicolatte, monospace;
+  font-size: 100px;
+}
+
+h2 {
+  font-family: Nicolatte, monospace;
+  font-size: 60px;
+  margin: 22px 0px;
+  text-align: center;
+}
+
+h3 {
+  font-family: Nicolatte, monospace;
+  font-size: 40px;
+}
+
+.contact-section {
+  text-align: center;
+  min-height: calc(100vh - 62px);
+  padding: 50px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.contact-section h1 {
+  margin: 0px;
+}
+
+.contact-section .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact-section .contacts div {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.contact-section .contacts div > :hover {
+  cursor: pointer;
+  -webkit-animation: bounce 1s;
+          animation: bounce 1s;
+  fill: var(--other-col);
+}
+
+.contact-section .contacts svg {
+  width: 180px;
+  max-height: 240px;
 }

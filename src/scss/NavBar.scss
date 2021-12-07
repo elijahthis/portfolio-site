@@ -6,6 +6,9 @@ header {
 
   border-bottom: 1px solid #1f1f1f;
   position: sticky;
+  background-color: #ffffff;
+  top: 0;
+  z-index: 3;
 }
 
 nav {
@@ -23,4 +26,8 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
 }

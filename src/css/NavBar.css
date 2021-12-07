@@ -13,12 +13,25 @@
   src: url(../fonts/Dosis/static/Dosis-Medium.ttf);
 }
 
+@font-face {
+  font-family: Nicolatte;
+  src: url(../fonts/NICOLATTE.ttf);
+}
+
+@font-face {
+  font-family: Apercu Mono;
+  src: url(../fonts/ApercuMono.ttf);
+}
+
 header {
   font-family: Dosis-Medium;
   font-size: 16px;
   border-bottom: 1px solid #1f1f1f;
   position: -webkit-sticky;
   position: sticky;
+  background-color: #ffffff;
+  top: 0;
+  z-index: 3;
 }
 
 nav {
@@ -49,4 +62,9 @@ ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+ul a {
+  color: #000000;
+  text-decoration: none;
 }

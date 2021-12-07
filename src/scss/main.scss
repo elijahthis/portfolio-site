@@ -1,5 +1,76 @@
 @import "config";
 
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-60px);
+  }
+}
+
 :root {
   font-family: Dosis-Medium;
+  --main-col: #000000;
+  --main-bg: #ffffff;
+  --padding-val: 40px;
+  --other-col: #3137dc;
+
+  color: var(--main-col);
+  background-color: var(--main-bg);
+}
+h1 {
+  font-family: Nicolatte, monospace;
+  font-size: 100px;
+}
+h2 {
+  font-family: Nicolatte, monospace;
+  font-size: 60px;
+  margin: 22px 0px;
+  text-align: center;
+}
+h3 {
+  font-family: Nicolatte, monospace;
+  font-size: 40px;
+}
+
+.contact-section {
+  text-align: center;
+  min-height: calc(100vh - 62px);
+  padding: 50px 10px;
+  box-sizing: border-box;
+
+  h1 {
+    margin: 0px;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+      height: 100%;
+      display: grid;
+      place-content: center;
+      & > :hover {
+        cursor: pointer;
+        animation: bounce 1s;
+        fill: var(--other-col);
+      }
+    }
+    svg {
+      width: 180px;
+      max-height: 240px;
+    }
+  }
 }

@@ -13,23 +13,57 @@
   src: url(../fonts/Dosis/static/Dosis-Medium.ttf);
 }
 
+@font-face {
+  font-family: Nicolatte;
+  src: url(../fonts/NICOLATTE.ttf);
+}
+
+@font-face {
+  font-family: Apercu Mono;
+  src: url(../fonts/ApercuMono.ttf);
+}
+
 @-webkit-keyframes rotateIt {
-  from {
+  0% {
     scale: 0;
     opacity: 0;
   }
-  to {
+  30% {
+    scale: 0.3;
+    opacity: 0.8;
+  }
+  50% {
+    scale: 1.2;
+    opacity: 1;
+  }
+  70% {
+    scale: 0.8;
+    opacity: 1;
+  }
+  100% {
     scale: 1;
     opacity: 1;
   }
 }
 
 @keyframes rotateIt {
-  from {
+  0% {
     scale: 0;
     opacity: 0;
   }
-  to {
+  30% {
+    scale: 0.3;
+    opacity: 0.8;
+  }
+  50% {
+    scale: 1.2;
+    opacity: 1;
+  }
+  70% {
+    scale: 0.8;
+    opacity: 1;
+  }
+  100% {
     scale: 1;
     opacity: 1;
   }
@@ -92,28 +126,27 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url();
 }
 
 .my-1 {
   font-size: 50px;
   margin: 0px;
-  font-family: Dosis-Regular;
-  -webkit-animation: rotateIt 1.5s 3;
-          animation: rotateIt 1.5s 3;
+  opacity: 0;
+  font-family: Nicolatte, monospace;
+  -webkit-animation: rotateIt 2s 2s forwards;
+          animation: rotateIt 2s 2s forwards;
 }
 
 .my-2 {
   font-size: 100px;
   margin: 0px;
-  font-family: Dosis-Medium;
-  -webkit-animation: show 1s 5s forwards, typing 2s 5s steps(6), blink 0.5s step-end infinite alternate;
-          animation: show 1s 5s forwards, typing 2s 5s steps(6), blink 0.5s step-end infinite alternate;
+  -webkit-animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6), blink 0.5s step-end infinite alternate;
+          animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6), blink 0.5s step-end infinite alternate;
   border-right: 3px solid;
   overflow: hidden;
   white-space: nowrap;
   width: 6ch;
-  font-family: monospace;
+  font-family: Nicolatte, monospace;
   opacity: 1;
   visibility: hidden;
 }
@@ -122,4 +155,48 @@ main {
   text-align: center;
   padding: 50px;
   border-radius: 10%;
+  z-index: 2;
+}
+
+.about-div {
+  position: absolute;
+  width: 100%;
+  height: 620px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: var(--padding-val);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.about-div > :nth-child(2),
+.about-div :nth-child(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.about-text {
+  width: 200px;
+}
+
+.button {
+  background-color: var(--main-col);
+  color: var(--main-bg);
+  padding: 20px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.button:hover {
+  cursor: pointer;
 }
