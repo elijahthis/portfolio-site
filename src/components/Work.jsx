@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useContext, useState } from "react";
+import { NavContext } from "../Contexts/NavContext";
 import "../css/Work.css";
 // import "../css/main.css";
 import devfinderPreview from "../images/devfinder-preview.png";
@@ -42,7 +42,7 @@ const Work = () => {
         "Simplenote is a website that allows you to pen down ideas as notes online and access them whenever you want. This is a clone of that website.",
         <br />,
         "UI credit: ",
-        <a href="https://app.simplenote.com" target="_blank" rel="noopener">
+        <a href="https://app.simplenote.com" target="_blank" rel="noreferrer">
           https://app.simplenote.com
         </a>,
       ],
@@ -70,6 +70,7 @@ const Work = () => {
   ];
 
   const [sliderInd, setSliderInd] = useState(0);
+  const { setInd } = useContext(NavContext);
   const handleSlide = (ev) => {
     if (ev.currentTarget.id === "arrow_right") {
       setSliderInd((sliderInd + 1) % 5);
@@ -105,52 +106,66 @@ const Work = () => {
     </svg>,
   ];
 
+  useEffect(() => {
+    const slide = setInterval(() => {
+      setSliderInd((sliderInd) => (sliderInd + 1) % 5);
+    }, 7000);
+    setInd(1);
+    return () => clearInterval(slide);
+  });
+
   return (
-    <div className="my-work">
-      <h2>My work</h2>
+    <>
+      <div className="my-work">
+        <h2>My work</h2>
 
-      <div className="banner-wrapper">
-        <div className="banner">
-          <img src={previousWork[sliderInd].previewImage} />
+        <div className="banner-wrapper">
+          <div className="banner">
+            <img
+              src={previousWork[sliderInd].previewImage}
+              className="front-image"
+              alt="job preview"
+            />
 
-          <div className="left-shutter"></div>
-          <div className="right-shutter"></div>
-          <div className="info">
-            <h3>{previousWork[sliderInd].title}</h3>
-            <p>{previousWork[sliderInd].description}</p>
-            <div className="buttons">
-              <a
-                href={previousWork[sliderInd].link}
-                target="_blank"
-                rel="noreferer"
-              >
-                <span className="button view">View live</span>
-              </a>
-              <a
-                href={previousWork[sliderInd].repo}
-                target="_blank"
-                rel="noreferer"
-              >
-                <span className="button view">View repo</span>
-              </a>
+            <div className="left-shutter"></div>
+            <div className="right-shutter"></div>
+            <div className="info">
+              <h3>{previousWork[sliderInd].title}</h3>
+              <p>{previousWork[sliderInd].description}</p>
+              <div className="buttons">
+                <a
+                  href={previousWork[sliderInd].link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="button view">View live</span>
+                </a>
+                <a
+                  href={previousWork[sliderInd].repo}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="button view">View repo</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="slider-arrows">
-          {arrows[0]}
-          {arrows[1]}
-        </div>
-        <div className="slider-navigation">
-          {previousWork.map((workitem, key) => (
-            <span
-              key={key}
-              className={sliderInd === key ? "focus" : ""}
-              onClick={() => setSliderInd(key)}
-            ></span>
-          ))}
+          <div className="slider-arrows">
+            {arrows[0]}
+            {arrows[1]}
+          </div>
+          <div className="slider-navigation">
+            {previousWork.map((workitem, key) => (
+              <span
+                key={key}
+                className={sliderInd === key ? "focus" : ""}
+                onClick={() => setSliderInd(key)}
+              ></span>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

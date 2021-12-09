@@ -111,6 +111,20 @@
   }
 }
 
+@-webkit-keyframes growIn {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes growIn {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 main {
   height: 620px;
   display: -webkit-box;
@@ -149,6 +163,14 @@ main {
   font-family: Nicolatte, monospace;
   opacity: 1;
   visibility: hidden;
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.my-2 ~ p,
+.my-2 ~ a {
+  opacity: 0;
+  -webkit-animation: appear 2s 9s forwards;
+          animation: appear 2s 9s forwards;
 }
 
 .big-div {
@@ -187,6 +209,46 @@ main {
 
 .about-text {
   width: 200px;
+  opacity: 0;
+  -webkit-animation: appear 2s 7s forwards;
+          animation: appear 2s 7s forwards;
+}
+
+.about-text span {
+  display: block;
+  padding: 10px;
+  -webkit-transition: all 1s cubic-bezier(0.17, 0.52, 0.68, -0.23);
+  transition: all 1s cubic-bezier(0.17, 0.52, 0.68, -0.23);
+}
+
+.about-text span:hover {
+  padding-left: 9px;
+  border-left: 1px solid #000000;
+  scale: 1.1;
+}
+
+#magic {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#arr {
+  height: 20px;
+  width: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: absolute;
+  right: 10%;
+  opacity: 0;
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+}
+
+#arr svg {
+  width: 100%;
+  fill: var(--main-bg);
 }
 
 .button {
@@ -195,8 +257,38 @@ main {
   padding: 20px;
   -webkit-transition: all 1s;
   transition: all 1s;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+          box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.button span {
+  margin-right: 0px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .button:hover {
   cursor: pointer;
+}
+
+.button:hover > #arr {
+  opacity: 1;
+}
+
+.button:hover > span {
+  margin-right: 60px;
 }

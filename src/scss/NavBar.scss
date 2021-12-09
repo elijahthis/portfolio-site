@@ -1,12 +1,24 @@
 @import "config";
 
+@keyframes stretch {
+  0% {
+    width: 40px;
+  }
+  70% {
+    width: 55px;
+  }
+  100% {
+    width: 40px;
+  }
+}
+
 header {
   font-family: Dosis-Medium;
   font-size: 16px;
 
-  border-bottom: 1px solid #1f1f1f;
+  // border-bottom: 1px solid #1f1f1f;
   position: sticky;
-  background-color: #ffffff;
+  background-color: var(--main-bg);
   top: 0;
   z-index: 3;
 }
@@ -14,7 +26,12 @@ header {
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
 }
 
 ul {
@@ -25,9 +42,77 @@ ul {
 
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  li {
+    position: relative;
+    transition: all 1s;
+  }
   a {
-    color: #000000;
+    color: var(--main-col);
     text-decoration: none;
+  }
+  .current {
+    // text-transform: uppercase;
+    font-weight: 700;
+    transition: all 1s;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--main-col);
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.toggle-switch {
+  opacity: 1;
+  width: 90px;
+  height: 25px;
+  padding: 3px 0px;
+  background-color: var(--main-col);
+  display: block;
+  border-radius: 30px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 0.7s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    width: 40px;
+    height: 18px;
+    background-color: var(--main-bg);
+    display: block;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    transform: translateY(-50%);
+    z-index: 2;
+    margin: 0px 7px;
+    transition: all 0.7s;
+    // animation: stretch 1s;
+  }
+  &.checked {
+    background-color: var(--main-col);
+
+    &::after {
+      background-color: var(--main-bg);
+      right: 0%;
+      transition: all 0.7s;
+      animation: stretch 1s forwards;
+    }
+  }
+  &.unchecked::after {
+    animation: stretch 1s;
   }
 }

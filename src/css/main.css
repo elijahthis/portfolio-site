@@ -61,14 +61,47 @@
   }
 }
 
+@-webkit-keyframes appear {
+  100% {
+    -webkit-transform: translate3d(0, 0%, 0);
+            transform: translate3d(0, 0%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    -webkit-transform: translate3d(0, 0%, 0);
+            transform: translate3d(0, 0%, 0);
+    opacity: 1;
+  }
+}
+
 :root {
   font-family: Dosis-Medium;
+  --padding-val: 40px;
+}
+
+.light {
   --main-col: #000000;
   --main-bg: #ffffff;
-  --padding-val: 40px;
   --other-col: #3137dc;
-  color: var(--main-col);
+}
+
+.dark {
+  --main-col: #ffffff;
+  --main-bg: #1f1d2b;
+  --other-col: #252836;
+}
+
+* {
+  -webkit-transition: color 1s, background-color 1s;
+  transition: color 1s, background-color 1s;
+}
+
+.App {
   background-color: var(--main-bg);
+  color: var(--main-col);
 }
 
 h1 {
@@ -81,11 +114,13 @@ h2 {
   font-size: 60px;
   margin: 22px 0px;
   text-align: center;
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
   font-family: Nicolatte, monospace;
   font-size: 40px;
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
 }
 
 .contact-section {
@@ -116,6 +151,11 @@ h3 {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-transform: translate3d(0, 30%, 0);
+          transform: translate3d(0, 30%, 0);
+  opacity: 0;
+  -webkit-animation: appear 2s 1s forwards;
+          animation: appear 2s 1s forwards;
 }
 
 .contact-section .contacts div {
@@ -133,6 +173,9 @@ h3 {
 }
 
 .contact-section .contacts svg {
-  width: 180px;
+  width: 130px;
   max-height: 240px;
+  -webkit-transition: all 2s ease-in;
+  transition: all 2s ease-in;
+  fill: var(--main-col);
 }

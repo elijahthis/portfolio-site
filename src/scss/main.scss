@@ -15,17 +15,37 @@
     transform: translateY(-60px);
   }
 }
+@keyframes appear {
+  100% {
+    transform: translate3d(0, 0%, 0);
+    opacity: 1;
+  }
+}
 
 :root {
   font-family: Dosis-Medium;
+  --padding-val: 40px;
+}
+.light {
   --main-col: #000000;
   --main-bg: #ffffff;
-  --padding-val: 40px;
   --other-col: #3137dc;
-
-  color: var(--main-col);
-  background-color: var(--main-bg);
 }
+.dark {
+  --main-col: #ffffff;
+  --main-bg: #1f1d2b;
+  --other-col: #252836;
+}
+
+* {
+  transition: color 1s, background-color 1s;
+}
+
+.App {
+  background-color: var(--main-bg);
+  color: var(--main-col);
+}
+
 h1 {
   font-family: Nicolatte, monospace;
   font-size: 100px;
@@ -35,10 +55,12 @@ h2 {
   font-size: 60px;
   margin: 22px 0px;
   text-align: center;
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
 }
 h3 {
   font-family: Nicolatte, monospace;
   font-size: 40px;
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
 }
 
 .contact-section {
@@ -57,11 +79,15 @@ h3 {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    transform: translate3d(0, 30%, 0);
+    opacity: 0;
+    animation: appear 2s 1s forwards;
 
     div {
       height: 100%;
       display: grid;
       place-content: center;
+
       & > :hover {
         cursor: pointer;
         animation: bounce 1s;
@@ -69,8 +95,10 @@ h3 {
       }
     }
     svg {
-      width: 180px;
+      width: 130px;
       max-height: 240px;
+      transition: all 2s ease-in;
+      fill: var(--main-col);
     }
   }
 }

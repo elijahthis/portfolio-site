@@ -75,12 +75,11 @@
 .banner {
   -webkit-transition: all 1s;
   transition: all 1s;
-  border: 10px solid var(--other-col);
   width: 60vw;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   overflow: hidden;
 }
 
@@ -125,18 +124,23 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  padding: 0px 120px;
+  padding: 0px 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .slider-arrows > * {
   width: 40px;
-  fill: rgba(0, 0, 0, 0.7);
+  fill: var(--main-col);
+  opacity: 0.6;
+  margin: 0px 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .slider-arrows > *:hover {
-  fill: #000000;
+  fill: var(--main-col);
+  opacity: 1;
 }
 
 .slider-arrows > :first-child {
@@ -144,9 +148,19 @@
           transform: scale(-1, 1);
 }
 
-#arrow_right > :hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+.slider-arrows > :first-child:hover {
+  -webkit-transform: scale(-1, 1) translateX(20%);
+          transform: scale(-1, 1) translateX(20%);
+}
+
+#arrow_right {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#arrow_right:hover {
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
 }
 
 .slider-navigation {
@@ -160,14 +174,18 @@
   height: 15px;
   border-radius: 15px;
   border-radius: 50%;
-  border: 1px solid #000000;
+  border: 1px solid var(--main-col);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
+.slider-navigation > *:hover {
+  cursor: pointer;
+}
+
 .focus {
-  background-color: #000000;
-  border: 1px solid #ffffff;
+  background-color: var(--main-col);
+  border: 1px solid var(--main-bg);
 }
 
 .left-shutter,

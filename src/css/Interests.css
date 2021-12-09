@@ -1,0 +1,190 @@
+@font-face {
+  font-family: Dosis-Regular;
+  src: url(../fonts/Dosis/static/Dosis-Regular.ttf);
+}
+
+@font-face {
+  font-family: Dosis-Bold;
+  src: url(../fonts/Dosis/static/Dosis-Bold.ttf);
+}
+
+@font-face {
+  font-family: Dosis-Medium;
+  src: url(../fonts/Dosis/static/Dosis-Medium.ttf);
+}
+
+@font-face {
+  font-family: Nicolatte;
+  src: url(../fonts/NICOLATTE.ttf);
+}
+
+@font-face {
+  font-family: Apercu Mono;
+  src: url(../fonts/ApercuMono.ttf);
+}
+
+@-webkit-keyframes slideUp {
+  50% {
+    -webkit-transform: translate3d(0, -44%, 0);
+            transform: translate3d(0, -44%, 0);
+  }
+  60% {
+    -webkit-transform: translate3d(0, -44%, 0);
+            transform: translate3d(0, -44%, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -88.88%, 0);
+            transform: translate3d(0, -88.88%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -88.88%, 0);
+            transform: translate3d(0, -88.88%, 0);
+  }
+}
+
+@keyframes slideUp {
+  50% {
+    -webkit-transform: translate3d(0, -44%, 0);
+            transform: translate3d(0, -44%, 0);
+  }
+  60% {
+    -webkit-transform: translate3d(0, -44%, 0);
+            transform: translate3d(0, -44%, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -88.88%, 0);
+            transform: translate3d(0, -88.88%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -88.88%, 0);
+            transform: translate3d(0, -88.88%, 0);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  50% {
+    -webkit-transform: translate3d(0, -44%, 0);
+            transform: translate3d(0, -44%, 0);
+  }
+  60% {
+    -webkit-transform: translate3d(0, -44%, 0);
+            transform: translate3d(0, -44%, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 0%, 0);
+            transform: translate3d(0, 0%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0%, 0);
+            transform: translate3d(0, 0%, 0);
+  }
+}
+
+@keyframes slideDown {
+  50% {
+    -webkit-transform: translate3d(0, -44%, 0);
+            transform: translate3d(0, -44%, 0);
+  }
+  60% {
+    -webkit-transform: translate3d(0, -44%, 0);
+            transform: translate3d(0, -44%, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 0%, 0);
+            transform: translate3d(0, 0%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0%, 0);
+            transform: translate3d(0, 0%, 0);
+  }
+}
+
+.interests-section {
+  height: calc(100vh - 63px);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 121px 1fr;
+      grid-template-rows: 121px 1fr;
+  --grid-box-height: 246px;
+}
+
+.interests-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: var(--grid-box-height) var(--grid-box-height);
+      grid-template-rows: var(--grid-box-height) var(--grid-box-height);
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.interests-grid > * {
+  position: relative;
+  overflow: hidden;
+}
+
+.coding {
+  background-image: url(../images/coding2.png);
+  background-size: cover;
+  background-position-y: center;
+}
+
+.coding:hover {
+  background-image: url(../images/coding.webp);
+}
+
+.phantom-books,
+.phantom-movies {
+  position: absolute;
+  top: 0;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: slideUp 40s linear infinite;
+          animation: slideUp 40s linear infinite;
+}
+
+.phantom-books:hover,
+.phantom-movies:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.phantom-books img,
+.phantom-movies img {
+  min-width: 100%;
+  max-width: 100%;
+  display: block;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.phantom-books img:hover,
+.phantom-movies img:hover {
+  scale: 1.1;
+}
+
+.phantom-movies {
+  -webkit-transform: translate3d(0, -85.7%, 0);
+          transform: translate3d(0, -85.7%, 0);
+  -webkit-animation: slideDown 35s linear infinite;
+          animation: slideDown 35s linear infinite;
+}
+
+.n-dance {
+  background-image: url(../images/not-dance.gif);
+  background-size: cover;
+  background-position-y: center;
+}
+
+.n-dance:hover {
+  background-image: url(../images/not-dance2.png);
+  background-size: scale(1.1);
+}
+
+.sleep {
+  background-image: url(../images/zzz.gif);
+  background-size: cover;
+}

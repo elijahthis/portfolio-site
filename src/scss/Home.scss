@@ -52,6 +52,11 @@
     visibility: visible;
   }
 }
+@keyframes growIn {
+  100% {
+    transform: scale(1);
+  }
+}
 
 main {
   height: 620px;
@@ -82,6 +87,13 @@ main {
   font-family: Nicolatte, monospace;
   opacity: 1;
   visibility: hidden;
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+
+  & ~ p,
+  & ~ a {
+    opacity: 0;
+    animation: appear 2s 9s forwards;
+  }
 }
 
 .big-div {
@@ -114,14 +126,65 @@ main {
 
 .about-text {
   width: 200px;
+  opacity: 0;
+  animation: appear 2s 7s forwards;
+  span {
+    display: block;
+    padding: 10px;
+    transition: all 1s cubic-bezier(0.17, 0.52, 0.68, -0.23);
+    &:hover {
+      padding-left: 9px;
+      border-left: 1px solid #000000;
+      scale: 1.1;
+    }
+  }
 }
 
+#magic {
+  text-decoration: none;
+  color: #ffffff;
+}
+#arr {
+  height: 20px;
+  width: 40px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: absolute;
+  right: 10%;
+  opacity: 0;
+  transition: all ease-in-out 1s;
+  svg {
+    width: 100%;
+    fill: var(--main-bg);
+  }
+}
 .button {
   background-color: var(--main-col);
   color: var(--main-bg);
   padding: 20px;
   transition: all 1s;
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  span {
+    margin-right: 0px;
+    transition: all 1s;
+  }
+
+  // box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   &:hover {
     cursor: pointer;
+    & > #arr {
+      opacity: 1;
+    }
+    & > span {
+      margin-right: 60px;
+    }
   }
 }

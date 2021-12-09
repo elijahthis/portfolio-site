@@ -1,8 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useContext } from "react";
+import { NavContext } from "../Contexts/NavContext";
+
 import "../css/main.css";
 
 const Contact = () => {
+  const { setInd } = useContext(NavContext);
+  useEffect(() => {
+    setInd(2);
+  });
+
   const contactMethods = [
     {
       //whatsapp
@@ -51,16 +57,18 @@ const Contact = () => {
     },
   ];
   return (
-    <section className="contact-section">
-      <h2>Work with me?</h2>
-      <div className="contacts">
-        {contactMethods.map((method) => (
-          <a href={method.link} target="_blank">
-            <div>{method.image}</div>
-          </a>
-        ))}
-      </div>
-    </section>
+    <>
+      <section className="contact-section">
+        <h2>Work with me?</h2>
+        <div className="contacts">
+          {contactMethods.map((method) => (
+            <a href={method.link} target="_blank" rel="noreferrer">
+              <div>{method.image}</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

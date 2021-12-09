@@ -1,0 +1,108 @@
+@import "config";
+
+@keyframes slideUp {
+  50% {
+    transform: translate3d(0, -44%, 0);
+  }
+
+  60% {
+    transform: translate3d(0, -44%, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -88.88%, 0);
+  }
+  100% {
+    transform: translate3d(0, -88.88%, 0);
+  }
+}
+
+@keyframes slideDown {
+  50% {
+    transform: translate3d(0, -44%, 0);
+  }
+
+  60% {
+    transform: translate3d(0, -44%, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 0%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0%, 0);
+  }
+}
+
+
+.interests-section {
+  height: calc(100vh - 63px);
+  display: grid;
+  grid-template-rows: 121px 1fr;
+
+  --grid-box-height: 246px;
+}
+.interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: var(--grid-box-height) var(--grid-box-height);
+  align-items: stretch;
+  & > * {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.coding {
+  background-image: url(../images/coding2.png);
+  background-size: cover;
+  background-position-y: center;
+  &:hover {
+    background-image: url(../images/coding.webp);
+  }
+}
+
+.phantom-books,
+.phantom-movies {
+  position: absolute;
+  top: 0;
+  // max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+
+  animation: slideUp 40s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+    // background-color: black;
+  }
+
+  img {
+    min-width: 100%;
+    max-width: 100%;
+    display: block;
+    transition: all 1s;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
+
+.phantom-movies {
+  transform: translate3d(0, -85.7%, 0);
+  animation: slideDown 35s linear infinite;
+}
+
+.n-dance {
+  background-image: url(../images/not-dance.gif);
+  background-size: cover;
+  background-position-y: center;
+  &:hover {
+    background-image: url(../images/not-dance2.png);
+    background-size: scale(1.1);
+  }
+}
+.sleep {
+  background-image: url(../images/zzz.gif);
+  background-size: cover;
+}
