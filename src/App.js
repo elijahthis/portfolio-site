@@ -12,7 +12,7 @@ import "./css/main.css";
 
 const App = () => {
   const [ind, setInd] = useState(0);
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("light");
 
   return (
     <>
