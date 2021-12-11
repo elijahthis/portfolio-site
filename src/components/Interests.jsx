@@ -2,20 +2,11 @@ import React, { useEffect, useContext } from "react";
 import { NavContext } from "../Contexts/NavContext";
 import "../css/Interests.css";
 import HP3 from "../images/HP-prisoner-of-azkaban.jpg";
-import HP4 from "../images/HP-goblet-of-fire.jpg";
-import HP6 from "../images/HP-half-blood-prince.jpg";
-import HP7 from "../images/HP-deathly-hallows.jpg";
-import WK1 from "../images/wk-1.png";
-import Percy2 from "../images/percy2.jpg";
-import Percy3 from "../images/percy3.webp";
-import Percy4 from "../images/percy4.png";
-import Percy5 from "../images/percy5.png";
-import MV1 from "../images/dark-knight.png";
-import MV2 from "../images/iron-man.png";
-import MV3 from "../images/the-shining.png";
-import MV4 from "../images/got.png";
 import MV5 from "../images/big-bang-theory.png";
-import MV6 from "../images/originals.png";
+import cKay from "../images/ckay.jpg";
+import nDance from "../images/not-dance.png";
+import zzz from "../images/zzz.gif";
+import codingImage from "../images/code.jpg";
 
 const Interests = () => {
   const { setInd } = useContext(NavContext);
@@ -23,36 +14,92 @@ const Interests = () => {
     setInd(3);
   });
 
-  const bookList = [Percy4, HP3, HP4, Percy2, Percy3, HP6, Percy5, HP7, WK1];
-  const movieList = [MV1, MV2, MV3, MV4, MV5, MV6, MV1];
-
   return (
     <>
       <section className="interests-section">
-        <h2>My Interests</h2>
+        <h2>I like to...</h2>
         <div className="interests-grid">
-          {/* <div>I like to solve coding challenges.</div> */}
-          <div className="coding"></div>
+          <div className="coding">
+            <div className="img-wrap">
+              <img src={codingImage} />
+            </div>
+            <div className="interest">solve coding challenges.</div>
+          </div>
           <div>
-            read novels.
-            <div className="phantom-books">
-              {bookList.map((book) => (
-                <img src={book} alt="books" />
-              ))}
+            <div className="interest">read novels.</div>
+            <div className="img-wrap">
+              <img src={HP3} />
             </div>
           </div>
-          <div>listen to music.</div>
-          {/* <div>NOT dance.</div> */}
-          <div className="n-dance"></div>
           <div>
-            watch movies and TV series (mainly horror).
-            <div className="phantom-movies">
-              {movieList.map((movie) => (
-                <img src={movie} alt="movies" />
-              ))}
+            <div className="img-wrap">
+              <img src={cKay} />
+            </div>
+            <div className="interest">listen to music.</div>
+          </div>
+          <div>
+            <div className="interest">NOT dance.</div>
+            <div className="img-wrap">
+              <img src={nDance} style={{ transform: "translateY(-25%)" }} />
             </div>
           </div>
-          <div className="sleep">sleep.</div>
+          <div>
+            <div className="img-wrap">
+              <img src={MV5} />
+            </div>
+            <div className="interest">
+              watch movies and TV series (mainly horror).
+            </div>
+          </div>
+          <div className="sleep">
+            <div className="interest">sleep.</div>
+            <div className="img-wrap">
+              <img src={zzz} style={{ transform: "translateY(-50%)" }} />
+            </div>
+          </div>
+        </div>
+        <div className="interests-flex">
+          <div className="coding">
+            <div className="img-wrap">
+              <img src={codingImage} />
+            </div>
+            <div className="interest">solve coding challenges.</div>
+          </div>
+          <div>
+            <div className="interest">read novels.</div>
+            <div className="img-wrap">
+              <img src={HP3} style={{ maxWidth: "100%", maxHeight: "500%" }} />
+            </div>
+          </div>
+          <div>
+            <div className="img-wrap">
+              <img src={cKay} />
+            </div>
+            <div className="interest">listen to music.</div>
+          </div>
+          <div>
+            <div className="interest">NOT dance.</div>
+            <div className="img-wrap">
+              <img src={nDance} />
+            </div>
+          </div>
+          <div>
+            <div className="img-wrap">
+              <img src={MV5} style={{ maxWidth: "100%", maxHeight: "500%" }} />
+            </div>
+            <div className="interest">
+              watch movies and TV series (mainly horror).
+            </div>
+          </div>
+          <div className="sleep">
+            <div className="interest">
+              <span style={{ visibility: "hidden" }}>Tight</span>
+              <span>sleep.</span>
+            </div>
+            <div className="img-wrap">
+              <img src={zzz} />
+            </div>
+          </div>
         </div>
       </section>
     </>

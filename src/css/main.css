@@ -104,78 +104,215 @@
   color: var(--main-col);
 }
 
-h1 {
-  font-family: Nicolatte, monospace;
-  font-size: 100px;
+@media screen and (min-width: 992px) {
+  /* start of desktop styles */
+  h1 {
+    font-family: Nicolatte, monospace;
+    font-size: 80px;
+  }
+  h2 {
+    font-family: Nicolatte, monospace;
+    font-size: 50px;
+    margin: 22px 0px;
+    text-align: center;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  h3 {
+    font-family: Nicolatte, monospace;
+    font-size: 25px;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  .contact-section {
+    text-align: center;
+    min-height: calc(100vh - 62px);
+    padding: 50px 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .contact-section h1 {
+    margin: 0px;
+  }
+  .contact-section .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-transform: translate3d(0, 30%, 0);
+            transform: translate3d(0, 30%, 0);
+    opacity: 0;
+    -webkit-animation: appear 2s 1s forwards;
+            animation: appear 2s 1s forwards;
+  }
+  .contact-section .contacts div {
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  .contact-section .contacts div > :hover {
+    cursor: pointer;
+    -webkit-animation: bounce 1s;
+            animation: bounce 1s;
+    fill: var(--other-col);
+  }
+  .contact-section .contacts svg {
+    width: 130px;
+    max-height: 240px;
+    -webkit-transition: all 2s ease-in;
+    transition: all 2s ease-in;
+    fill: var(--main-col);
+  }
 }
 
-h2 {
-  font-family: Nicolatte, monospace;
-  font-size: 60px;
-  margin: 22px 0px;
-  text-align: center;
-  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+@media screen and (min-width: 480px) and (max-width: 991px) {
+  /* start of tablet styles */
+  h1 {
+    font-family: Nicolatte, monospace;
+    font-size: 80px;
+  }
+  h2 {
+    font-family: Nicolatte, monospace;
+    font-size: 50px;
+    margin: 22px 0px;
+    text-align: center;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  h3 {
+    font-family: Nicolatte, monospace;
+    font-size: 25px;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  .contact-section {
+    text-align: center;
+    min-height: calc(100vh - 62px);
+    padding: 50px 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .contact-section h1 {
+    margin: 0px;
+  }
+  .contact-section .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-transform: translate3d(0, 30%, 0);
+            transform: translate3d(0, 30%, 0);
+    opacity: 0;
+    -webkit-animation: appear 2s 1s forwards;
+            animation: appear 2s 1s forwards;
+  }
+  .contact-section .contacts div {
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  .contact-section .contacts div > :hover {
+    cursor: pointer;
+    -webkit-animation: bounce 1s;
+            animation: bounce 1s;
+    fill: var(--other-col);
+  }
+  .contact-section .contacts svg {
+    width: 130px;
+    max-height: 240px;
+    -webkit-transition: all 2s ease-in;
+    transition: all 2s ease-in;
+    fill: var(--main-col);
+  }
 }
 
-h3 {
-  font-family: Nicolatte, monospace;
-  font-size: 40px;
-  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
-}
-
-.contact-section {
-  text-align: center;
-  min-height: calc(100vh - 62px);
-  padding: 50px 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.contact-section h1 {
-  margin: 0px;
-}
-
-.contact-section .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-transform: translate3d(0, 30%, 0);
-          transform: translate3d(0, 30%, 0);
-  opacity: 0;
-  -webkit-animation: appear 2s 1s forwards;
-          animation: appear 2s 1s forwards;
-}
-
-.contact-section .contacts div {
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-}
-
-.contact-section .contacts div > :hover {
-  cursor: pointer;
-  -webkit-animation: bounce 1s;
-          animation: bounce 1s;
-  fill: var(--other-col);
-}
-
-.contact-section .contacts svg {
-  width: 130px;
-  max-height: 240px;
-  -webkit-transition: all 2s ease-in;
-  transition: all 2s ease-in;
-  fill: var(--main-col);
+@media screen and (max-width: 479px) {
+  /* start of phone styles */
+  h1 {
+    font-family: Nicolatte, monospace;
+    font-size: 80px;
+  }
+  h2 {
+    font-family: Nicolatte, monospace;
+    font-size: 50px;
+    margin: 22px 0px;
+    text-align: center;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  h3 {
+    font-family: Nicolatte, monospace;
+    font-size: 25px;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  .contact-section {
+    text-align: center;
+    min-height: calc(100vh - 62px);
+    padding: 50px 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .contact-section h1 {
+    margin: 0px;
+  }
+  .contact-section .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-transform: translate3d(0, 30%, 0);
+            transform: translate3d(0, 30%, 0);
+    opacity: 0;
+    -webkit-animation: appear 2s 1s forwards;
+            animation: appear 2s 1s forwards;
+  }
+  .contact-section .contacts div {
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  .contact-section .contacts div > :hover {
+    cursor: pointer;
+    -webkit-animation: bounce 1s;
+            animation: bounce 1s;
+    fill: var(--other-col);
+  }
+  .contact-section .contacts svg {
+    width: 85px;
+    max-height: 120px;
+    -webkit-transition: all 2s ease-in;
+    transition: all 2s ease-in;
+    fill: var(--main-col);
+  }
 }

@@ -46,59 +46,182 @@
   color: var(--main-col);
 }
 
-h1 {
-  font-family: Nicolatte, monospace;
-  font-size: 100px;
-}
-h2 {
-  font-family: Nicolatte, monospace;
-  font-size: 60px;
-  margin: 22px 0px;
-  text-align: center;
-  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
-}
-h3 {
-  font-family: Nicolatte, monospace;
-  font-size: 40px;
-  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
-}
-
-.contact-section {
-  text-align: center;
-  min-height: calc(100vh - 62px);
-  padding: 50px 10px;
-  box-sizing: border-box;
-
+@media screen and (min-width: 992px) {
+  /* start of desktop styles */
   h1 {
-    margin: 0px;
+    font-family: Nicolatte, monospace;
+    font-size: 80px;
+  }
+  h2 {
+    font-family: Nicolatte, monospace;
+    font-size: 50px;
+    margin: 22px 0px;
+    text-align: center;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  h3 {
+    font-family: Nicolatte, monospace;
+    font-size: 25px;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
   }
 
-  .contacts {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    transform: translate3d(0, 30%, 0);
-    opacity: 0;
-    animation: appear 2s 1s forwards;
+  .contact-section {
+    text-align: center;
+    min-height: calc(100vh - 62px);
+    padding: 50px 10px;
+    box-sizing: border-box;
 
-    div {
-      height: 100%;
-      display: grid;
-      place-content: center;
+    h1 {
+      margin: 0px;
+    }
 
-      & > :hover {
-        cursor: pointer;
-        animation: bounce 1s;
-        fill: var(--other-col);
+    .contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      transform: translate3d(0, 30%, 0);
+      opacity: 0;
+      animation: appear 2s 1s forwards;
+
+      div {
+        height: 100%;
+        display: grid;
+        place-content: center;
+
+        & > :hover {
+          cursor: pointer;
+          animation: bounce 1s;
+          fill: var(--other-col);
+        }
+      }
+      svg {
+        width: 130px;
+        max-height: 240px;
+        transition: all 2s ease-in;
+        fill: var(--main-col);
       }
     }
-    svg {
-      width: 130px;
-      max-height: 240px;
-      transition: all 2s ease-in;
-      fill: var(--main-col);
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 991px) {
+  /* start of tablet styles */
+  h1 {
+    font-family: Nicolatte, monospace;
+    font-size: 80px;
+  }
+  h2 {
+    font-family: Nicolatte, monospace;
+    font-size: 50px;
+    margin: 22px 0px;
+    text-align: center;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  h3 {
+    font-family: Nicolatte, monospace;
+    font-size: 25px;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .contact-section {
+    text-align: center;
+    min-height: calc(100vh - 62px);
+    padding: 50px 10px;
+    box-sizing: border-box;
+
+    h1 {
+      margin: 0px;
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      transform: translate3d(0, 30%, 0);
+      opacity: 0;
+      animation: appear 2s 1s forwards;
+
+      div {
+        height: 100%;
+        display: grid;
+        place-content: center;
+
+        & > :hover {
+          cursor: pointer;
+          animation: bounce 1s;
+          fill: var(--other-col);
+        }
+      }
+      svg {
+        width: 130px;
+        max-height: 240px;
+        transition: all 2s ease-in;
+        fill: var(--main-col);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  /* start of phone styles */
+  h1 {
+    font-family: Nicolatte, monospace;
+    font-size: 80px;
+  }
+  h2 {
+    font-family: Nicolatte, monospace;
+    font-size: 50px;
+    margin: 22px 0px;
+    text-align: center;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  h3 {
+    font-family: Nicolatte, monospace;
+    font-size: 25px;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .contact-section {
+    text-align: center;
+    min-height: calc(100vh - 62px);
+    padding: 50px 20px;
+    box-sizing: border-box;
+
+    h1 {
+      margin: 0px;
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      transform: translate3d(0, 30%, 0);
+      opacity: 0;
+      animation: appear 2s 1s forwards;
+
+      div {
+        height: 100%;
+        display: grid;
+        place-content: center;
+
+        & > :hover {
+          cursor: pointer;
+          animation: bounce 1s;
+          fill: var(--other-col);
+        }
+      }
+      svg {
+        width: 85px;
+        max-height: 120px;
+        transition: all 2s ease-in;
+        fill: var(--main-col);
+      }
     }
   }
 }

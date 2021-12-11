@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { NavContext } from "../Contexts/NavContext";
 import { Link } from "react-router-dom";
 import "../css/NavBar.css";
@@ -8,8 +8,14 @@ const NavBar = () => {
   const [checked, setChecked] = useState(false);
   const { ind, setTheme } = useContext(NavContext);
   const handleSwitch = () => {
-    setTheme(`${!checked ? "dark" : "light"}`);
+    setTheme(`${!checked ? "light" : "dark"}`);
+    localStorage.setItem("theme", !checked ? "light" : "dark");
   };
+
+  useEffect(() => {
+    localStorage.getItem("theme") === "light" && setChecked(true);
+  }, [setChecked]);
+
   return (
     <header>
       <nav>
@@ -33,9 +39,7 @@ const NavBar = () => {
             setChecked(!checked);
             handleSwitch();
           }}
-        >
-          {/* <input type="checkbox" id="toggler" /> */}
-        </span>
+        ></span>
       </nav>
     </header>
   );

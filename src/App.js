@@ -6,13 +6,11 @@ import Home from "./components/Home";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Interests from "./components/Interests";
-
-// import logo from "./logo.svg";
 import "./css/main.css";
 
 const App = () => {
   const [ind, setInd] = useState(0);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "dark");
 
   return (
     <>

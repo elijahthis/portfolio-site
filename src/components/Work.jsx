@@ -126,6 +126,11 @@ const Work = () => {
               className="front-image"
               alt="job preview"
             />
+            {/* <img
+              src={previousWork[(sliderInd+1)%5].previewImage}
+              className="back-image"
+              alt="job preview"
+            /> */}
 
             <div className="left-shutter"></div>
             <div className="right-shutter"></div>
@@ -163,6 +168,30 @@ const Work = () => {
               ></span>
             ))}
           </div>
+        </div>
+        <div className="mobile-work">
+          {previousWork.map((workitem) => (
+            <div>
+              <div className="img-border">
+                <img
+                  src={workitem.previewImage}
+                  className="front-image"
+                  alt="job preview"
+                />
+              </div>
+              <h3>{workitem.title}</h3>
+              <p>{workitem.description}</p>
+              <div className="buttons">
+                <a href={workitem.link} target="_blank" rel="noreferrer">
+                  <span className="button view">View live</span>
+                </a>
+                <a href={workitem.repo} target="_blank" rel="noreferrer">
+                  <span className="button view">View repo</span>
+                </a>
+              </div>
+              <hr />
+            </div>
+          ))}
         </div>
       </div>
     </>

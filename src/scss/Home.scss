@@ -1,17 +1,6 @@
 @import "config";
 
-@keyframes rotateIt {
-  // from {
-  //   // transform: rotate(0deg);
-  //   scale: 0;
-  //   // opacity: 0;
-  // }
-  // to {
-  //   // transform: rotate(360deg);
-  //   scale: 1;
-  //   // opacity: 1;
-  // }
-
+@keyframes zoomBounce {
   0% {
     scale: 0;
     opacity: 0;
@@ -58,133 +47,400 @@
   }
 }
 
-main {
-  height: 620px;
+@media screen and (min-width: 992px) {
+  /* start of desktop styles */
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  main {
+    height: 620px;
 
-.my-1 {
-  font-size: 50px;
-  margin: 0px;
-  opacity: 0;
-  font-family: Nicolatte, monospace;
-
-  animation: rotateIt 2s 2s forwards;
-}
-.my-2 {
-  font-size: 100px;
-  margin: 0px;
-  animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6),
-    blink 0.5s step-end infinite alternate;
-  border-right: 3px solid;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 6ch;
-  font-family: Nicolatte, monospace;
-  opacity: 1;
-  visibility: hidden;
-  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
-
-  & ~ p,
-  & ~ a {
-    opacity: 0;
-    animation: appear 2s 9s forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-}
 
-.big-div {
-  text-align: center;
-  //   border: 1px solid black;
-  padding: 50px;
-  border-radius: 10%;
-  z-index: 2;
+  .my-1 {
+    font-size: 50px;
+    margin: 0px;
+    opacity: 0;
+    font-family: Nicolatte, monospace;
 
-  //   animation: rotateIt 1s;
-}
+    animation: zoomBounce 2s 2s forwards;
+  }
+  .my-2 {
+    font-size: 100px;
+    margin: 0px;
+    animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6),
+      blink 0.5s step-end infinite alternate;
+    border-right: 3px solid;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 6ch;
+    font-family: Nicolatte, monospace;
+    opacity: 1;
+    visibility: hidden;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
 
-.about-div {
-  position: absolute;
-  width: 100%;
-  height: 620px;
-  box-sizing: border-box;
-  padding: var(--padding-val);
+    & ~ p,
+    & ~ a {
+      opacity: 0;
+      animation: appear 2s 9s forwards;
+    }
+  }
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  .big-div {
+    text-align: center;
+    //   border: 1px solid black;
+    padding: 50px;
+    border-radius: 10%;
+    z-index: 2;
+  }
 
-  & > :nth-child(2),
-  :nth-child(4) {
+  .about-div {
+    position: absolute;
+    width: 100%;
+    height: 620px;
+    box-sizing: border-box;
+    padding: var(--padding-val);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & > :nth-child(2),
+    :nth-child(4) {
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+    }
+  }
+
+  .about-text {
+    width: 200px;
+    opacity: 0;
+    animation: appear 2s 7s forwards;
+    span {
+      display: block;
+      padding: 10px;
+      transition: all 1s ease-in;
+      &:hover {
+        padding-left: 9px;
+        border-left: 1px solid var(--main-col);
+        scale: 1.1;
+      }
+    }
+  }
+
+  #magic {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  #arr {
+    height: 20px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: absolute;
+    right: 10%;
+    opacity: 0;
+    transition: all ease-in-out 1s;
+    svg {
+      width: 100%;
+      fill: var(--main-bg);
+    }
+  }
+  .button {
+    background-color: var(--main-col);
+    color: var(--main-bg);
+    padding: 20px;
+    transition: all 1s;
+    position: relative;
+
     display: flex;
     flex-direction: row;
-    justify-content: right;
-  }
-}
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
-.about-text {
-  width: 200px;
-  opacity: 0;
-  animation: appear 2s 7s forwards;
-  span {
-    display: block;
-    padding: 10px;
-    transition: all 1s cubic-bezier(0.17, 0.52, 0.68, -0.23);
+    span {
+      margin-right: 0px;
+      transition: all 1s;
+    }
+
     &:hover {
-      padding-left: 9px;
-      border-left: 1px solid #000000;
-      scale: 1.1;
+      cursor: pointer;
+      & > #arr {
+        opacity: 1;
+      }
+      & > span {
+        margin-right: 60px;
+      }
     }
   }
 }
 
-#magic {
-  text-decoration: none;
-  color: #ffffff;
-}
-#arr {
-  height: 20px;
-  width: 40px;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  position: absolute;
-  right: 10%;
-  opacity: 0;
-  transition: all ease-in-out 1s;
-  svg {
+@media screen and (min-width: 480px) and (max-width: 991px) {
+  /* start of tablet styles */
+
+  main {
+    height: 620px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .my-1 {
+    font-size: 50px;
+    margin: 0px;
+    opacity: 0;
+    font-family: Nicolatte, monospace;
+
+    animation: zoomBounce 2s 2s forwards;
+  }
+  .my-2 {
+    font-size: 100px;
+    margin: 0px;
+    animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6),
+      blink 0.5s step-end infinite alternate;
+    border-right: 3px solid;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 6ch;
+    font-family: Nicolatte, monospace;
+    opacity: 1;
+    visibility: hidden;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+
+    & ~ p,
+    & ~ a {
+      opacity: 0;
+      animation: appear 2s 9s forwards;
+    }
+  }
+
+  .big-div {
+    text-align: center;
+    //   border: 1px solid black;
+    padding: 50px;
+    border-radius: 10%;
+    z-index: 2;
+  }
+
+  .about-div {
+    position: absolute;
     width: 100%;
-    fill: var(--main-bg);
+    height: 620px;
+    box-sizing: border-box;
+    padding: var(--padding-val);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & > :nth-child(2),
+    :nth-child(4) {
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+    }
+  }
+
+  .about-text {
+    width: 200px;
+    opacity: 0;
+    animation: appear 2s 7s forwards;
+    span {
+      display: block;
+      padding: 10px;
+      transition: all 1s ease-in;
+      &:hover {
+        padding-left: 9px;
+        border-left: 1px solid var(--main-col);
+        scale: 1.1;
+      }
+    }
+  }
+
+  #magic {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  #arr {
+    height: 20px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: absolute;
+    right: 10%;
+    opacity: 0;
+    transition: all ease-in-out 1s;
+    svg {
+      width: 100%;
+      fill: var(--main-bg);
+    }
+  }
+  .button {
+    background-color: var(--main-col);
+    color: var(--main-bg);
+    padding: 20px;
+    transition: all 1s;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+    span {
+      margin-right: 0px;
+      transition: all 1s;
+    }
+
+    &:hover {
+      cursor: pointer;
+      & > #arr {
+        opacity: 1;
+      }
+      & > span {
+        margin-right: 60px;
+      }
+    }
   }
 }
-.button {
-  background-color: var(--main-col);
-  color: var(--main-bg);
-  padding: 20px;
-  transition: all 1s;
-  position: relative;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+@media screen and (max-width: 479px) {
+  /* start of phone styles */
 
-  span {
-    margin-right: 0px;
-    transition: all 1s;
+  main {
+    height: 620px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  // box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  &:hover {
-    cursor: pointer;
-    & > #arr {
-      opacity: 1;
+  .my-1 {
+    font-size: 35px;
+    margin: 0px;
+    opacity: 0;
+    font-family: Nicolatte, monospace;
+
+    animation: zoomBounce 2s 2s forwards;
+  }
+  .my-2 {
+    font-size: 75px;
+    margin: 0px;
+    animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6),
+      blink 0.5s step-end infinite alternate;
+    border-right: 3px solid;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 6ch;
+    font-family: Nicolatte, monospace;
+    opacity: 1;
+    visibility: hidden;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+
+    & ~ p,
+    & ~ a {
+      opacity: 0;
+      animation: appear 2s 9s forwards;
     }
-    & > span {
-      margin-right: 60px;
+  }
+
+  .big-div {
+    text-align: center;
+    //   border: 1px solid black;
+    padding: 50px;
+    border-radius: 10%;
+    z-index: 2;
+  }
+
+  .about-div {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 620px;
+    box-sizing: border-box;
+    padding: var(--padding-val);
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    & > :nth-child(2),
+    :nth-child(4) {
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+    }
+  }
+
+  .about-text {
+    width: 200px;
+    opacity: 0;
+    animation: appear 2s 7s forwards;
+    span {
+      display: block;
+      padding: 10px;
+      transition: all 1s ease-in;
+      &:hover {
+        padding-left: 9px;
+        border-left: 1px solid var(--main-col);
+        scale: 1.1;
+      }
+    }
+  }
+
+  #magic {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  #arr {
+    height: 20px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: absolute;
+    right: 10%;
+    opacity: 0;
+    transition: all ease-in-out 1s;
+    svg {
+      width: 100%;
+      fill: var(--main-bg);
+    }
+  }
+  .button {
+    background-color: var(--main-col);
+    color: var(--main-bg);
+    padding: 15px;
+    transition: all 1s;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+    span {
+      margin-right: 0px;
+      transition: all 1s;
+    }
+
+    &:hover {
+      cursor: pointer;
+      & > #arr {
+        opacity: 1;
+      }
+      & > span {
+        margin-right: 60px;
+      }
     }
   }
 }
