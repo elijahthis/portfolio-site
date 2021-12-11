@@ -6,9 +6,9 @@ This website was created to showcase and highlight my skills as a **Web Develope
 
 ### Technologies Used:
 
-**HTML5**
-**React JS**
-**Sass (CSS Framework)**
+- **HTML5**
+- **React JS**
+- **Sass (CSS Framework)**
 
 I used these tools to beautify my portfolio website and make it easy to manipulate. Also, because I used a templating engine **(React JS)**, redundant repitition was avoided and updating the website will be relatively easy.
 
