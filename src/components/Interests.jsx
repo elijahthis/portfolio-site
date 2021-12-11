@@ -21,31 +21,35 @@ const Interests = () => {
         <div className="interests-grid">
           <div className="coding">
             <div className="img-wrap">
-              <img src={codingImage} />
+              <img src={codingImage} alt="coding" />
             </div>
             <div className="interest">solve coding challenges.</div>
           </div>
           <div>
             <div className="interest">read novels.</div>
             <div className="img-wrap">
-              <img src={HP3} />
+              <img src={HP3} alt="reading" />
             </div>
           </div>
           <div>
             <div className="img-wrap">
-              <img src={cKay} />
+              <img src={cKay} alt="beautiful music" />
             </div>
             <div className="interest">listen to music.</div>
           </div>
           <div>
             <div className="interest">NOT dance.</div>
             <div className="img-wrap">
-              <img src={nDance} style={{ transform: "translateY(-25%)" }} />
+              <img
+                src={nDance}
+                style={{ transform: "translateY(-25%)" }}
+                alt="dance"
+              />
             </div>
           </div>
           <div>
             <div className="img-wrap">
-              <img src={MV5} />
+              <img src={MV5} alt="movies" />
             </div>
             <div className="interest">
               watch movies and TV series (mainly horror).
@@ -54,38 +58,50 @@ const Interests = () => {
           <div className="sleep">
             <div className="interest">sleep.</div>
             <div className="img-wrap">
-              <img src={zzz} style={{ transform: "translateY(-50%)" }} />
+              <img
+                src={zzz}
+                style={{ transform: "translateY(-50%)" }}
+                alt="sleeping"
+              />
             </div>
           </div>
         </div>
         <div className="interests-flex">
           <div className="coding">
             <div className="img-wrap">
-              <img src={codingImage} />
+              <img src={codingImage} alt="coding" />
             </div>
             <div className="interest">solve coding challenges.</div>
           </div>
           <div>
             <div className="interest">read novels.</div>
             <div className="img-wrap">
-              <img src={HP3} style={{ maxWidth: "100%", maxHeight: "500%" }} />
+              <img
+                src={HP3}
+                style={{ maxWidth: "100%", maxHeight: "500%" }}
+                alt="reading"
+              />
             </div>
           </div>
           <div>
             <div className="img-wrap">
-              <img src={cKay} />
+              <img src={cKay} alt="beautiful music" />
             </div>
             <div className="interest">listen to music.</div>
           </div>
           <div>
             <div className="interest">NOT dance.</div>
             <div className="img-wrap">
-              <img src={nDance} />
+              <img src={nDance} alt="dance" />
             </div>
           </div>
           <div>
             <div className="img-wrap">
-              <img src={MV5} style={{ maxWidth: "100%", maxHeight: "500%" }} />
+              <img
+                src={MV5}
+                style={{ maxWidth: "100%", maxHeight: "500%" }}
+                alt="movies"
+              />
             </div>
             <div className="interest">
               watch movies and TV series (mainly horror).
@@ -97,7 +113,7 @@ const Interests = () => {
               <span>sleep.</span>
             </div>
             <div className="img-wrap">
-              <img src={zzz} />
+              <img src={zzz} alt="sleeping" />
             </div>
           </div>
         </div>
