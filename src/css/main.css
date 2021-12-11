@@ -238,8 +238,8 @@
     fill: var(--other-col);
   }
   .contact-section .contacts svg {
-    width: 130px;
-    max-height: 240px;
+    width: 90px;
+    max-height: 150px;
     -webkit-transition: all 2s ease-in;
     transition: all 2s ease-in;
     fill: var(--main-col);

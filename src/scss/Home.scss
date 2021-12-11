@@ -230,13 +230,15 @@
 
   .about-div {
     position: absolute;
+    top: 100%;
     width: 100%;
     height: 620px;
     box-sizing: border-box;
     padding: var(--padding-val);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
     & > :nth-child(2),
     :nth-child(4) {

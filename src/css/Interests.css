@@ -105,7 +105,7 @@
     display: grid;
     -ms-grid-rows: 121px 1fr;
         grid-template-rows: 121px 1fr;
-    --grid-box-height: 246px;
+    --grid-box-height: 205px;
   }
   .interests-grid {
     display: -ms-grid;
