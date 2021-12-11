@@ -193,6 +193,18 @@
       margin: 5px;
     }
 
+    .tools {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 15px;
+      > * {
+        padding-right: 10px;
+        margin-right: 10px;
+        margin-top: 0px;
+        border-right: 1px solid white;
+      }
+    }
+
     .buttons {
       margin-top: 20px;
       .view {
@@ -251,6 +263,18 @@
       }
     }
 
+    .tools {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 15px;
+      > * {
+        padding-right: 10px;
+        margin-right: 10px;
+        margin-top: 0px;
+        border-right: 1px solid var(--main-col);
+      }
+    }
+
     .buttons {
       display: flex;
       flex-direction: row;
@@ -302,6 +326,18 @@
         &:hover {
           scale: 1.1;
         }
+      }
+    }
+
+    .tools {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 15px;
+      > * {
+        padding-right: 10px;
+        margin-right: 10px;
+        margin-top: 0px;
+        border-right: 1px solid var(--main-col);
       }
     }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { NavContext } from "../Contexts/NavContext";
 import "../css/Work.css";
 // import "../css/main.css";
+import portfolioPreview from "../images/portfolio-preview.png";
 import devfinderPreview from "../images/devfinder-preview.png";
 import LiveGistsPreview from "../images/Live-Gists-preview.png";
 import PlanetsFactSitePreview from "../images/Planets-Fact-Site-preview.png";
@@ -10,6 +11,15 @@ import TodoAppPreview from "../images/Todo-app-preview.png";
 
 const Work = () => {
   const previousWork = [
+    {
+      title: "Portfolio",
+      description:
+        "My name is Elijah. I'm a Full-Stack Web Developer. Welcome to my portfolio website. Enjoy...",
+      previewImage: portfolioPreview,
+      link: "https://elijahthis-portfolio.netlify.app/",
+      repo: "https://github.com/elijahthis/portfolio-site",
+      tools: ["React JS", "Sass"],
+    },
     {
       title: "devfinder",
       description:
@@ -59,23 +69,15 @@ const Work = () => {
       repo: "https://github.com/elijahthis/Todo-App",
       tools: ["HTML", "CSS", "JavaScript"],
     },
-    // {
-    //   title: "Amazon Clone",
-    //   description:
-    //     "A simple clone of the e-coerce website, Amazon. Uses React and consumes custom Django API.",
-    //   previewImage: { React },
-    //   link: "",
-    //   repo: "",
-    // },
   ];
 
   const [sliderInd, setSliderInd] = useState(0);
   const { setInd } = useContext(NavContext);
   const handleSlide = (ev) => {
     if (ev.currentTarget.id === "arrow_right") {
-      setSliderInd((sliderInd + 1) % 5);
+      setSliderInd((sliderInd + 1) % previousWork.length);
     } else {
-      setSliderInd((sliderInd - 1 + 5) % 5);
+      setSliderInd((sliderInd - 1 + previousWork.length) % previousWork.length);
     }
   };
 
@@ -126,17 +128,16 @@ const Work = () => {
               className="front-image"
               alt="job preview"
             />
-            {/* <img
-              src={previousWork[(sliderInd+1)%5].previewImage}
-              className="back-image"
-              alt="job preview"
-            /> */}
-
             <div className="left-shutter"></div>
             <div className="right-shutter"></div>
             <div className="info">
               <h3>{previousWork[sliderInd].title}</h3>
               <p>{previousWork[sliderInd].description}</p>
+              <div className="tools">
+                {previousWork[sliderInd].tools.map((tool) => (
+                  <p>{tool}</p>
+                ))}
+              </div>
               <div className="buttons">
                 <a
                   href={previousWork[sliderInd].link}
@@ -181,6 +182,11 @@ const Work = () => {
               </div>
               <h3>{workitem.title}</h3>
               <p>{workitem.description}</p>
+              <div className="tools">
+                {workitem.tools.map((tool) => (
+                  <p>{tool}</p>
+                ))}
+              </div>
               <div className="buttons">
                 <a href={workitem.link} target="_blank" rel="noreferrer">
                   <span className="button view">View live</span>
