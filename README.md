@@ -1,10 +1,11 @@
-#Portfolio Website
+# Portfolio Website
 
 My name is **_Elijah_**. I'm a **_Full-Stack Web Developer_**. Welcome to my portfolio website.
 
 This website was created to showcase and highlight my skills as a **Web Developer** in a cohesive portfolio format.
 
-###Technologies Used:
+### Technologies Used:
+
 **HTML5**
 **React JS**
 **Sass (CSS Framework)**
@@ -16,7 +17,8 @@ The website was originally made with a splendid monochrome theme. I then impleme
 ![Light Mode](src/images/portfolio-light.png?raw=true "Light Mode")
 ![Dark Mode](src/images/portfolio-preview.png?raw=true "Dark Mode")
 
-Evaluate the website and don't forget to hit me up if you're interested in working with me, or if you even have any feedback or ideas. Thanks
+Evaluate the website and don't forget to hit me up if you're interested in working with me, or if you even have any feedback or ideas. Thanks.
+
 Email: **emperorelijah007@gmail.com**
 Live site url: [My Portfolio](https://elijahthis-portfolio.netlify.app/)
 
