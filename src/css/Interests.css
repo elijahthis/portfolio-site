@@ -44,6 +44,8 @@
         -ms-flex-align: stretch;
             align-items: stretch;
     background-color: var(--main-bg);
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
   }
   .interests-grid > * {
     padding: 20px;
@@ -60,6 +62,10 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .interests-grid > ::nth-child(4) img {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
   }
   .interests-flex {
     display: none;
@@ -86,7 +92,8 @@
     transition: all 1s;
   }
   img:hover {
-    scale: 1.1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   .interest {
     opacity: 0;
@@ -160,7 +167,8 @@
     transition: all 1s;
   }
   img:hover {
-    scale: 1.1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   .interest {
     opacity: 0;
@@ -187,6 +195,8 @@
   .interests-flex {
     padding: 0px 20px;
     background-color: var(--main-bg);
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
   }
   .interests-flex > * {
     display: -webkit-box;
@@ -221,11 +231,14 @@
   }
   .interests-flex .img-wrap img {
     max-height: 100%;
-    -webkit-transition: all 1s;
-    transition: all 1s;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
   }
   .interests-flex .img-wrap img:hover {
-    scale: 1.1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   .interests-flex .interest {
     padding: 15px;

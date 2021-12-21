@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { NavContext } from "../Contexts/NavContext";
+import { Link } from "react-router-dom";
 
 import "../css/main.css";
 
@@ -67,6 +68,14 @@ const Contact = () => {
             </a>
           ))}
         </div>
+        <Link to="/interests">
+          <div className="nav-arrow">
+            <svg width="6" height="8" style={{ transform: "scale(3)" }}>
+              <path fill="none" d="M1 0l4 4-4 4" />
+            </svg>
+            <div className="dot"></div>
+          </div>
+        </Link>
       </section>
     </>
   );

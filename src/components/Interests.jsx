@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { NavContext } from "../Contexts/NavContext";
+import { Link } from "react-router-dom";
 import "../css/Interests.css";
 import HP3 from "../images/HP-prisoner-of-azkaban.jpg";
 import MV5 from "../images/big-bang-theory.png";
@@ -40,11 +41,7 @@ const Interests = () => {
           <div>
             <div className="interest">NOT dance.</div>
             <div className="img-wrap">
-              <img
-                src={nDance}
-                style={{ transform: "translateY(-25%)" }}
-                alt="dance"
-              />
+              <img src={nDance} alt="dance" />
             </div>
           </div>
           <div>
@@ -58,11 +55,7 @@ const Interests = () => {
           <div className="sleep">
             <div className="interest">sleep.</div>
             <div className="img-wrap">
-              <img
-                src={zzz}
-                style={{ transform: "translateY(-50%)" }}
-                alt="sleeping"
-              />
+              <img src={zzz} alt="sleeping" />
             </div>
           </div>
         </div>
@@ -117,6 +110,14 @@ const Interests = () => {
             </div>
           </div>
         </div>
+        <Link to="/">
+          <div className="nav-arrow">
+            <svg width="6" height="8" style={{ transform: "scale(3)" }}>
+              <path fill="none" d="M1 0l4 4-4 4" />
+            </svg>
+            <div className="dot"></div>
+          </div>
+        </Link>
       </section>
     </>
   );

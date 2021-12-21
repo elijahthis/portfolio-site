@@ -77,6 +77,28 @@
   }
 }
 
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 :root {
   font-family: Dosis-Medium;
   --padding-val: 40px;
@@ -94,14 +116,11 @@
   --other-col: #252836;
 }
 
-* {
-  -webkit-transition: color 1s, background-color 1s;
-  transition: color 1s, background-color 1s;
-}
-
 .App {
   background-color: var(--main-bg);
   color: var(--main-col);
+  -webkit-transition: color 1s, background-color 1s;
+  transition: color 1s, background-color 1s;
 }
 
 @media screen and (min-width: 992px) {
@@ -115,12 +134,12 @@
     font-size: 50px;
     margin: 22px 0px;
     text-align: center;
-    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   }
   h3 {
     font-family: Nicolatte, monospace;
     font-size: 25px;
-    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   }
   .contact-section {
     text-align: center;
@@ -173,6 +192,48 @@
     transition: all 2s ease-in;
     fill: var(--main-col);
   }
+  .nav-arrow {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--main-bg);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-arrow:hover {
+    cursor: pointer;
+  }
+  .nav-arrow svg {
+    stroke: var(--main-col);
+  }
+  .nav-arrow .dot {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border: 3px dotted var(--main-col);
+    border-radius: 50%;
+    -webkit-animation: 7s spin linear infinite;
+            animation: 7s spin linear infinite;
+  }
+  .nav-arrow .dot:hover {
+    border-style: solid;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 991px) {
@@ -180,18 +241,21 @@
   h1 {
     font-family: Nicolatte, monospace;
     font-size: 80px;
+    background-color: transparent;
   }
   h2 {
     font-family: Nicolatte, monospace;
     font-size: 50px;
     margin: 22px 0px;
     text-align: center;
-    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
   }
   h3 {
     font-family: Nicolatte, monospace;
     font-size: 25px;
-    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
   }
   .contact-section {
     text-align: center;
@@ -244,6 +308,58 @@
     transition: all 2s ease-in;
     fill: var(--main-col);
   }
+  .dot-a {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+  }
+  .dot-a .nav-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  .nav-arrow {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    width: 45px;
+    height: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-arrow:hover {
+    cursor: pointer;
+  }
+  .nav-arrow svg {
+    stroke: var(--main-col);
+  }
+  .nav-arrow .dot {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border: 3px dotted var(--main-col);
+    border-radius: 50%;
+    -webkit-animation: 7s spin linear infinite;
+            animation: 7s spin linear infinite;
+  }
+  .nav-arrow .dot:hover {
+    border-style: solid;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -257,12 +373,12 @@
     font-size: 50px;
     margin: 22px 0px;
     text-align: center;
-    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
   }
   h3 {
     font-family: Nicolatte, monospace;
     font-size: 25px;
-    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
   .contact-section {
     text-align: center;
@@ -314,5 +430,59 @@
     -webkit-transition: all 2s ease-in;
     transition: all 2s ease-in;
     fill: var(--main-col);
+  }
+  .dot-a {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+  }
+  .dot-a .nav-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  .nav-arrow {
+    position: fixed;
+    top: 90%;
+    left: 80%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: var(--main-bg);
+  }
+  .nav-arrow:hover {
+    cursor: pointer;
+  }
+  .nav-arrow svg {
+    stroke: var(--main-col);
+  }
+  .nav-arrow .dot {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border: 3px dotted var(--main-col);
+    border-radius: 50%;
+    -webkit-animation: 7s spin linear infinite;
+            animation: 7s spin linear infinite;
+  }
+  .nav-arrow .dot:hover {
+    border-style: solid;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
   }
 }

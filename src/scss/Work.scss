@@ -354,5 +354,21 @@
         text-decoration: none;
       }
     }
+    .skills {
+      background-color: var(--main-col);
+      color: var(--main-bg);
+      padding: 15px;
+      transition: all 1s;
+      position: relative;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+      h3 {
+        margin: 0px;
+      }
+    }
   }
 }

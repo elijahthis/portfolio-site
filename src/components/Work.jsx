@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
 import { NavContext } from "../Contexts/NavContext";
+import { Link } from "react-router-dom";
 import "../css/Work.css";
 // import "../css/main.css";
 import portfolioPreview from "../images/portfolio-preview.png";
@@ -72,6 +73,7 @@ const Work = () => {
   ];
 
   const [sliderInd, setSliderInd] = useState(0);
+  const [openSkills, setOpenSkills] = useState(false);
   const { setInd } = useContext(NavContext);
   const handleSlide = (ev) => {
     if (ev.currentTarget.id === "arrow_right") {
@@ -169,6 +171,14 @@ const Work = () => {
               ></span>
             ))}
           </div>
+          <Link to="/contact">
+            <div className="nav-arrow">
+              <svg width="6" height="8" style={{ transform: "scale(3)" }}>
+                <path fill="none" d="M1 0l4 4-4 4" />
+              </svg>
+              <div className="dot"></div>
+            </div>
+          </Link>
         </div>
         <div className="mobile-work">
           {previousWork.map((workitem) => (
@@ -198,7 +208,23 @@ const Work = () => {
               <hr />
             </div>
           ))}
+          <p
+            className={`${openSkills ? "skills" : "button"}`}
+            onClick={() => {
+              setOpenSkills(!openSkills);
+            }}
+          >
+            <h3>Skills</h3>
+          </p>
         </div>
+        <Link to="/contact">
+          <div className="nav-arrow">
+            <svg width="6" height="8" style={{ transform: "scale(3)" }}>
+              <path fill="none" d="M1 0l4 4-4 4" />
+            </svg>
+            <div className="dot"></div>
+          </div>
+        </Link>
       </div>
     </>
   );

@@ -405,4 +405,30 @@
   .mobile-work .buttons a {
     text-decoration: none;
   }
+  .mobile-work .skills {
+    background-color: var(--main-col);
+    color: var(--main-bg);
+    padding: 15px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+  .mobile-work .skills h3 {
+    margin: 0px;
+  }
 }

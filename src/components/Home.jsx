@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { NavContext } from "../Contexts/NavContext";
 import "../css/Home.css";
-// import "../css/main.css";
+import "../css/main.css";
 
 const Home = () => {
   const { setInd } = useContext(NavContext);
@@ -67,6 +67,15 @@ const Home = () => {
             </p>
           </div>
         </div>
+        <Link to="/work">
+          <div className="nav-arrow">
+            <svg width="6" height="8" style={{ transform: "scale(3)" }}>
+              <path fill="none" d="M1 0l4 4-4 4" />
+            </svg>
+
+            <div className="dot"></div>
+          </div>
+        </Link>
       </main>
     </>
   );
