@@ -62,8 +62,8 @@ const Contact = () => {
       <section className="contact-section">
         <h2>Work with me?</h2>
         <div className="contacts">
-          {contactMethods.map((method) => (
-            <a href={method.link} target="_blank" rel="noreferrer">
+          {contactMethods.map((method, i) => (
+            <a href={method.link} target="_blank" rel="noreferrer" key={i}>
               <div>{method.image}</div>
             </a>
           ))}

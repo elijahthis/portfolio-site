@@ -443,6 +443,9 @@
   .button:hover > span {
     margin-right: 60px;
   }
+  .button h3 {
+    margin: 0px;
+  }
 }
 
 @media screen and (max-width: 479px) {

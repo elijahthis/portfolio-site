@@ -9,6 +9,15 @@ import LiveGistsPreview from "../images/Live-Gists-preview.png";
 import PlanetsFactSitePreview from "../images/Planets-Fact-Site-preview.png";
 import SimplenoteClonePreview from "../images/Simplenote-clone-prevew.png";
 import TodoAppPreview from "../images/Todo-app-preview.png";
+import htmlLogo from "../images/html-logo.png";
+import cssLogo from "../images/css-logo.png";
+import javascriptLogo from "../images/javascript-logo.png";
+import pythonLogo from "../images/python-logo.png";
+import djangoLogo from "../images/django-logo.svg";
+import postgresqlLogo from "../images/postgresql-logo.png";
+import reactLogo from "../images/react-logo.png";
+import sassLogo from "../images/sass-logo.png";
+import gitLogo from "../images/git-logo.png";
 
 const Work = () => {
   const previousWork = [
@@ -51,9 +60,14 @@ const Work = () => {
       title: "Simplenote Clone",
       description: [
         "Simplenote is a website that allows you to pen down ideas as notes online and access them whenever you want. This is a clone of that website.",
-        <br />,
+        <br key={1} />,
         "UI credit: ",
-        <a href="https://app.simplenote.com" target="_blank" rel="noreferrer">
+        <a
+          href="https://app.simplenote.com"
+          target="_blank"
+          rel="noreferrer"
+          key={2}
+        >
           https://app.simplenote.com
         </a>,
       ],
@@ -70,6 +84,17 @@ const Work = () => {
       repo: "https://github.com/elijahthis/Todo-App",
       tools: ["HTML", "CSS", "JavaScript"],
     },
+  ];
+  const skills = [
+    ["JavaScript", javascriptLogo],
+    ["React JS", reactLogo],
+    ["HTML", htmlLogo],
+    ["CSS", cssLogo],
+    ["Python", pythonLogo],
+    ["Django", djangoLogo],
+    ["Sass", sassLogo],
+    ["PostgreSQL", postgresqlLogo],
+    ["Version Control (Git)", gitLogo],
   ];
 
   const [sliderInd, setSliderInd] = useState(0);
@@ -136,8 +161,8 @@ const Work = () => {
               <h3>{previousWork[sliderInd].title}</h3>
               <p>{previousWork[sliderInd].description}</p>
               <div className="tools">
-                {previousWork[sliderInd].tools.map((tool) => (
-                  <p>{tool}</p>
+                {previousWork[sliderInd].tools.map((tool, ind) => (
+                  <p key={ind}>{tool}</p>
                 ))}
               </div>
               <div className="buttons">
@@ -171,6 +196,27 @@ const Work = () => {
               ></span>
             ))}
           </div>
+          <div
+            className="skills"
+            onClick={() => {
+              setOpenSkills(!openSkills);
+            }}
+          >
+            <h3 style={{ borderBottomWidth: `${openSkills ? "3px" : "0px"}` }}>
+              Skills
+            </h3>
+            <div className="skills-main">
+              {skills.map((skill, ind) => (
+                <div key={ind}>
+                  <div>
+                    <p>{skill[0]}</p>
+                    <img src={skill[1]} alt={skill[0]} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <Link to="/contact">
             <div className="nav-arrow">
               <svg width="6" height="8" style={{ transform: "scale(3)" }}>
@@ -181,8 +227,8 @@ const Work = () => {
           </Link>
         </div>
         <div className="mobile-work">
-          {previousWork.map((workitem) => (
-            <div>
+          {previousWork.map((workitem, ind) => (
+            <div key={ind}>
               <div className="img-border">
                 <img
                   src={workitem.previewImage}
@@ -193,8 +239,8 @@ const Work = () => {
               <h3>{workitem.title}</h3>
               <p>{workitem.description}</p>
               <div className="tools">
-                {workitem.tools.map((tool) => (
-                  <p>{tool}</p>
+                {workitem.tools.map((tool, i) => (
+                  <p key={i}>{tool}</p>
                 ))}
               </div>
               <div className="buttons">
@@ -208,23 +254,39 @@ const Work = () => {
               <hr />
             </div>
           ))}
-          <p
-            className={`${openSkills ? "skills" : "button"}`}
+          <div
+            className="skills"
             onClick={() => {
               setOpenSkills(!openSkills);
             }}
           >
-            <h3>Skills</h3>
-          </p>
-        </div>
-        <Link to="/contact">
-          <div className="nav-arrow">
-            <svg width="6" height="8" style={{ transform: "scale(3)" }}>
-              <path fill="none" d="M1 0l4 4-4 4" />
-            </svg>
-            <div className="dot"></div>
+            <h3 style={{ borderBottomWidth: `${openSkills ? "3px" : "0px"}` }}>
+              Skills
+            </h3>
+            <div
+              className="skills-main"
+              style={{ maxHeight: `${openSkills ? "1400px" : "0px"}` }}
+            >
+              {skills.map((skill, ind) => (
+                <div key={ind}>
+                  <hr />
+                  <div>
+                    <p>{skill[0]}</p>
+                    <img src={skill[1]} alt={skill[0]} />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </Link>
+          <Link to="/contact">
+            <div className="nav-arrow">
+              <svg width="6" height="8" style={{ transform: "scale(3)" }}>
+                <path fill="none" d="M1 0l4 4-4 4" />
+              </svg>
+              <div className="dot"></div>
+            </div>
+          </Link>
+        </div>
       </div>
     </>
   );

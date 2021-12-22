@@ -36,7 +36,7 @@
 }
 .light {
   --main-col: #000000;
-  --main-bg: #ffffff;
+  --main-bg: #696363;
   --other-col: #3137dc;
 }
 .dark {
@@ -111,7 +111,7 @@
   }
 
   .nav-arrow {
-    position: absolute;
+    position: fixed;
     top: 90%;
     left: 90%;
     width: 45px;
@@ -218,16 +218,18 @@
     }
   }
   .nav-arrow {
-    position: absolute;
+    position: fixed;
     top: 90%;
     left: 90%;
     width: 45px;
     height: 45px;
+    border-radius: 50%;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: var(--main-bg);
     &:hover {
       cursor: pointer;
     }
