@@ -18,6 +18,8 @@ import postgresqlLogo from "../images/postgresql-logo.png";
 import reactLogo from "../images/react-logo.png";
 import sassLogo from "../images/sass-logo.png";
 import gitLogo from "../images/git-logo.png";
+import typescriptLogo from "../images/ts-logo.png";
+import nextjsLogo from "../images/next-black.svg";
 
 const Work = () => {
   const previousWork = [
@@ -87,7 +89,9 @@ const Work = () => {
   ];
   const skills = [
     ["JavaScript", javascriptLogo],
+    ["TypeScript", typescriptLogo],
     ["React JS", reactLogo],
+    ["Next JS", nextjsLogo],
     ["HTML", htmlLogo],
     ["CSS", cssLogo],
     ["Python", pythonLogo],
