@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { NavContext } from "../Contexts/NavContext";
 import "../css/Contact.css";
 import { Link } from "react-router-dom";
