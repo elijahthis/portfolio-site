@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { NavContext } from "../Contexts/NavContext";
+import Typewriter from "typewriter-effect";
 import "../css/Home.css";
 import "../css/main.css";
 
@@ -10,13 +11,35 @@ const Home = () => {
     setInd(0);
   });
 
+  // var typewriter = new Typewriter(document.getElementById("elijah"), {
+  //   autoStart: true,
+  //   loop: true,
+  //   delay: 75,
+  //   wrapperClassName: "my-2",
+  //   cursorClassName: "cur",
+  // });
+  // typewriter.pauseFor(4000).typeString("Elijah").start();
+
   return (
     <>
       <main>
         <div className="big-div">
           <h3 className="my-1">My name is...</h3>
-          <h1 className="my-2">Elijah</h1>
-          <p>I'm a Full-Stack Web Developer</p>
+          <Typewriter
+            options={{
+              loop: true,
+              wrapperClassName: "my-2",
+              cursorClassName: "cur",
+            }}
+            onInit={(typewriter) => {
+              typewriter
+                .pauseFor(4000)
+                .typeString("Elijah")
+                .pauseFor(60000)
+                .start();
+            }}
+          />
+          <p style={{ marginBottom: "10px" }}>I'm a Full-Stack Web Developer</p>
           <Link to="/contact" id="magic">
             <p className="button">
               <span>Let's make magic!</span>

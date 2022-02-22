@@ -154,22 +154,25 @@
   .my-2 {
     font-size: 100px;
     margin: 0px;
-    -webkit-animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6), blink 0.5s step-end infinite alternate;
-            animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6), blink 0.5s step-end infinite alternate;
+    -webkit-animation: blink 0.4s step-end infinite alternate;
+            animation: blink 0.4s step-end infinite alternate;
+    -webkit-transition: border-color 0.2s;
+    transition: border-color 0.2s;
     border-right: 3px solid;
     overflow: hidden;
     white-space: nowrap;
-    width: 6ch;
     font-family: Nicolatte, monospace;
     opacity: 1;
-    visibility: hidden;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    padding-right: 5px;
   }
   .my-2 ~ p,
   .my-2 ~ a {
     opacity: 0;
     -webkit-animation: appear 2s 9s forwards;
             animation: appear 2s 9s forwards;
+  }
+  .cur {
+    visibility: hidden;
   }
   .big-div {
     text-align: center;
@@ -471,14 +474,14 @@
     margin: 0px;
     opacity: 0;
     font-family: Nicolatte, monospace;
-    -webkit-animation: zoomBounce 2s 2s forwards;
-            animation: zoomBounce 2s 2s forwards;
+    -webkit-animation: zoomBounce 1s 1s forwards;
+            animation: zoomBounce 1s 1s forwards;
   }
   .my-2 {
     font-size: 75px;
     margin: 0px;
-    -webkit-animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6), blink 0.5s step-end infinite alternate;
-            animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6), blink 0.5s step-end infinite alternate;
+    -webkit-animation: show 1s 2.5s forwards, typing 2s 2.5s steps(6), blink 0.5s step-end infinite alternate;
+            animation: show 1s 2.5s forwards, typing 2s 2.5s steps(6), blink 0.5s step-end infinite alternate;
     border-right: 3px solid;
     overflow: hidden;
     white-space: nowrap;

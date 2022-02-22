@@ -1,0 +1,58 @@
+@import "config";
+
+.error-section {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  display: grid;
+  place-items: center;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & > div > :first-child {
+    font-size: 60px;
+    margin-bottom: 16px;
+  }
+  & > div > * {
+    margin-bottom: 24px;
+  }
+  .btn {
+    background: none;
+    color: var(--main-col);
+    padding: 15px 40px;
+    border-radius: 3px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    border-radius: 3px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    position: relative;
+    margin: 0 auto;
+    border: 1px var(--main-col) solid;
+
+    svg {
+      fill: var(--main-col);
+      width: 30px;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.8s;
+      top: 10px;
+      right: 10px;
+    }
+    div {
+      transition: transform 0.8s;
+      margin-bottom: 0px;
+    }
+    &:hover {
+      cursor: pointer;
+
+      svg {
+        opacity: 1;
+      }
+      div {
+        transform: translateX(-15px);
+      }
+    }
+  }
+}

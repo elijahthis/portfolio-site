@@ -6,7 +6,9 @@ import Home from "./components/Home";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Interests from "./components/Interests";
+import Error404 from "./components/404";
 import "./css/main.css";
+import "./App.css";
 
 const App = () => {
   const [ind, setInd] = useState(0);
@@ -20,10 +22,13 @@ const App = () => {
             <NavContext.Provider value={{ ind, setInd, theme, setTheme }}>
               <Navbar />
               <Routes>
-                <Route element={<Home />} path="/" />
-                <Route element={<Work />} path="/work" />
-                <Route element={<Contact />} path="/contact" />
-                <Route element={<Interests />} path="/interests" />
+                <Route path="/">
+                  <Route index element={<Home />} path="/" />
+                  <Route element={<Work />} path="work" />
+                  <Route element={<Contact />} path="contact" />
+                  <Route element={<Interests />} path="interests" />
+                  <Route element={<Error404 />} path="*" />
+                </Route>
               </Routes>
             </NavContext.Provider>
           </div>

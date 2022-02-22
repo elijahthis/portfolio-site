@@ -120,6 +120,7 @@ label {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 300px;
+  color: var(--main-col);
 }
 
 input,

@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import "../css/Work.css";
 // import "../css/main.css";
 import portfolioPreview from "../images/portfolio-preview.png";
+import felixPortfolioPreview from "../images/felix-portfolio.png";
+import NERCPreview from "../images/nerc-dashboard.png";
+import ankoraPreview from "../images/ankora-test.png";
 import devfinderPreview from "../images/devfinder-preview.png";
 import LiveGistsPreview from "../images/Live-Gists-preview.png";
 import PlanetsFactSitePreview from "../images/Planets-Fact-Site-preview.png";
@@ -33,13 +36,13 @@ const Work = () => {
       tools: ["React JS", "Sass"],
     },
     {
-      title: "devfinder",
+      title: "Felix Oyeleke Portfolio",
       description:
-        "devfinder is a simple app that helps developers find each other using their GitHub usernames. You type in the username and it shows you basic information about the dev. This app uses the GitHub API. It was made with React JS and SASS. Enjoy...and don't forget to check out the light mode!",
-      previewImage: devfinderPreview,
-      link: "https://elijahthis-devfinder.netlify.app/",
-      repo: "https://github.com/elijahthis/devfinder",
-      tools: ["React JS", "CSS", "API"],
+        "A portfolio website created for Felix Oyeleke, a hydrographic surveyor",
+      previewImage: felixPortfolioPreview,
+      link: "https://felixoyeleke.com/",
+      repo: "https://github.com/elijahthis/felix-oyeleke-portfolio",
+      tools: ["Next JS", "Sass"],
     },
     {
       title: "Live-Gists",
@@ -49,6 +52,33 @@ const Work = () => {
       link: "https://live-gists.netlify.app/",
       repo: "https://github.com/Regedit-msc/writty_client",
       tools: ["React JS", "CSS"],
+    },
+    {
+      title: "NERC Dashboard",
+      description:
+        "Dashboard to manage mytos and discos for the National Electricity Regulatory Commission (NERC).",
+      previewImage: NERCPreview,
+      link: "https://nerc-dashboard-mine.netlify.app/",
+      repo: "https://github.com/elijahthis/nerc-dashboard-mine",
+      tools: ["React JS", "Sass", "API"],
+    },
+    {
+      title: "Ankora Scheduler",
+      description:
+        "A calendar dashboard implemented as a test for Ankora Health. It manages appointments and schedules of nurses and patients.",
+      previewImage: ankoraPreview,
+      link: "https://elijahthis-ankora-test.netlify.app",
+      repo: "https://github.com/elijahthis/ankora-test",
+      tools: ["React JS", "Sass"],
+    },
+    {
+      title: "devfinder",
+      description:
+        "devfinder is a simple app that helps developers find each other using their GitHub usernames. You type in the username and it shows you basic information about the dev. This app uses the GitHub API. It was made with React JS and SASS. Enjoy...and don't forget to check out the light mode!",
+      previewImage: devfinderPreview,
+      link: "https://elijahthis-devfinder.netlify.app/",
+      repo: "https://github.com/elijahthis/devfinder",
+      tools: ["React JS", "CSS", "API"],
     },
     {
       title: "Planets Fact Site",
@@ -141,7 +171,7 @@ const Work = () => {
 
   useEffect(() => {
     const slide = setInterval(() => {
-      setSliderInd((sliderInd) => (sliderInd + 1) % 5);
+      setSliderInd((sliderInd) => (sliderInd + 1) % previousWork.length);
     }, 7000);
     setInd(1);
     return () => clearInterval(slide);
