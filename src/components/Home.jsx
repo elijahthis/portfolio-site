@@ -39,7 +39,7 @@ const Home = () => {
                 .start();
             }}
           />
-          <p style={{ marginBottom: "10px" }}>I'm a Full-Stack Web Developer</p>
+          <p style={{ marginBottom: "10px" }}>I'm a Frontend Engineer</p>
           <Link to="/contact" id="magic">
             <p className="button">
               <span>Let's make magic!</span>

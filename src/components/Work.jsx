@@ -132,7 +132,6 @@ const Work = () => {
   ];
 
   const [sliderInd, setSliderInd] = useState(0);
-  const [openSkills, setOpenSkills] = useState(false);
   const { setInd } = useContext(NavContext);
   const handleSlide = (ev) => {
     if (ev.currentTarget.id === "arrow_right") {
@@ -230,23 +229,11 @@ const Work = () => {
               ></span>
             ))}
           </div>
-          <div
-            className="skills"
-            onClick={() => {
-              setOpenSkills(!openSkills);
-            }}
-          >
-            <h3 style={{ borderBottomWidth: `${openSkills ? "3px" : "0px"}` }}>
-              Skills
-            </h3>
+          <div className="skills">
+            <h3>Skills</h3>
             <div className="skills-main">
               {skills.map((skill, ind) => (
-                <div key={ind}>
-                  <div>
-                    <p>{skill[0]}</p>
-                    <img src={skill[1]} alt={skill[0]} />
-                  </div>
-                </div>
+                <img src={skill[1]} alt={skill[0]} key={ind} />
               ))}
             </div>
           </div>
@@ -288,27 +275,11 @@ const Work = () => {
               <hr />
             </div>
           ))}
-          <div
-            className="skills"
-            onClick={() => {
-              setOpenSkills(!openSkills);
-            }}
-          >
-            <h3 style={{ borderBottomWidth: `${openSkills ? "3px" : "0px"}` }}>
-              Skills
-            </h3>
-            <div
-              className="skills-main"
-              style={{ maxHeight: `${openSkills ? "1400px" : "0px"}` }}
-            >
+          <div className="skills">
+            <h3>Skills</h3>
+            <div className="skills-main">
               {skills.map((skill, ind) => (
-                <div key={ind}>
-                  <hr />
-                  <div>
-                    <p>{skill[0]}</p>
-                    <img src={skill[1]} alt={skill[0]} />
-                  </div>
-                </div>
+                <img src={skill[1]} alt={skill[0]} key={ind} />
               ))}
             </div>
           </div>

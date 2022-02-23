@@ -39,6 +39,27 @@
     transform: scale(1.2);
   }
 }
+.skills {
+  h3 {
+    margin: 1.5rem 0;
+    text-align: center;
+    border-bottom: 3px solid var(--main-bg);
+  }
+}
+.skills-main {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  img {
+    width: 50px;
+    max-width: 50px;
+    min-width: 50px;
+    margin-left: 10px;
+  }
+}
 
 @media screen and (min-width: 992px) {
   /* start of desktop styles */
@@ -222,38 +243,6 @@
     }
   }
 
-  .skills {
-    width: 100%;
-    background-color: var(--main-col);
-    color: var(--main-bg);
-    padding: 10px 0px 40px 0px;
-    margin-top: 80px;
-    border-radius: 10px;
-    h3 {
-      text-align: center;
-    }
-  }
-  .skills-main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 400px;
-    margin: 0 auto;
-
-    & div > div {
-      padding: 0px 30px;
-    }
-
-    img {
-      width: 120px;
-    }
-    p {
-      width: fit-content;
-      font-weight: 600;
-      letter-spacing: 3px;
-    }
-  }
   .mobile-work {
     display: none;
   }
@@ -282,11 +271,18 @@
     > * {
       margin-bottom: 120px;
     }
+    h3 {
+      margin: 2rem 0 0.5rem 0;
+    }
+    p {
+      line-height: 1.5rem;
+    }
 
     .img-border {
       border-radius: 15px;
       overflow: hidden;
       box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -10px;
+      margin-bottom: 1rem;
 
       img {
         width: 100%;
@@ -321,55 +317,6 @@
       }
       a {
         text-decoration: none;
-      }
-    }
-    .skills {
-      background-color: var(--main-col);
-      color: var(--main-bg);
-      padding: 25px;
-      transition: all 1s;
-      position: relative;
-      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-      h3 {
-        margin: 0px;
-        padding: 10px 0px;
-        text-align: center;
-        border-bottom: 3px solid var(--main-bg);
-      }
-    }
-    .skills-main {
-      max-height: 0px;
-      overflow: hidden;
-      transition: max-height 1s;
-      & > div {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        border-bottom: 1px dashed var(--main-bg);
-      }
-      div > div {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        margin: 20px 0px;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-      img {
-        max-width: 130px;
-        margin-left: 25px;
-      }
-      p {
-        width: fit-content;
-        font-weight: 600;
-        letter-spacing: 3px;
-        // margin-left: auto;
-      }
-      hr {
-        width: 10px;
-        margin-right: 10px;
       }
     }
   }
@@ -397,12 +344,17 @@
     > * {
       margin-bottom: 100px;
     }
-
+    h3 {
+      margin: 2rem 0 0.5rem 0;
+    }
+    p {
+      line-height: 1.5rem;
+    }
     .img-border {
       border-radius: 10px;
       overflow: hidden;
       box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -10px;
-
+      margin-bottom: 1rem;
       img {
         width: 100%;
         display: block;
@@ -436,54 +388,6 @@
       }
       a {
         text-decoration: none;
-      }
-    }
-    .skills {
-      background-color: var(--main-col);
-      color: var(--main-bg);
-      padding: 25px;
-      transition: all 1s;
-      position: relative;
-      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-      h3 {
-        margin: 0px;
-        text-align: center;
-        border-bottom: 3px solid var(--main-bg);
-      }
-    }
-    .skills-main {
-      max-height: 0px;
-      overflow: hidden;
-      transition: max-height 1s;
-      & > div {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        border-bottom: 1px dashed var(--main-bg);
-      }
-      div > div {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        margin: 20px 0px;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-      img {
-        width: 50px;
-        margin-left: 10px;
-      }
-      p {
-        width: fit-content;
-        font-weight: 600;
-        letter-spacing: 3px;
-        // margin-left: auto;
-      }
-      hr {
-        width: 10px;
-        margin-right: 10px;
       }
     }
   }

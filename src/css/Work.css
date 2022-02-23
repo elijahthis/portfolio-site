@@ -54,6 +54,35 @@
   }
 }
 
+.skills h3 {
+  margin: 1.5rem 0;
+  text-align: center;
+  border-bottom: 3px solid var(--main-bg);
+}
+
+.skills-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills-main img {
+  width: 50px;
+  max-width: 50px;
+  min-width: 50px;
+  margin-left: 10px;
+}
+
 @media screen and (min-width: 992px) {
   /* start of desktop styles */
   .my-work {
@@ -262,46 +291,6 @@
     color: var(--main-col);
     background-color: var(--main-bg);
   }
-  .skills {
-    width: 100%;
-    background-color: var(--main-col);
-    color: var(--main-bg);
-    padding: 10px 0px 40px 0px;
-    margin-top: 80px;
-    border-radius: 10px;
-  }
-  .skills h3 {
-    text-align: center;
-  }
-  .skills-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  .skills-main div > div {
-    padding: 0px 30px;
-  }
-  .skills-main img {
-    width: 120px;
-  }
-  .skills-main p {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-weight: 600;
-    letter-spacing: 3px;
-  }
   .mobile-work {
     display: none;
   }
@@ -328,11 +317,18 @@
   .mobile-work > * {
     margin-bottom: 120px;
   }
+  .mobile-work h3 {
+    margin: 2rem 0 0.5rem 0;
+  }
+  .mobile-work p {
+    line-height: 1.5rem;
+  }
   .mobile-work .img-border {
     border-radius: 15px;
     overflow: hidden;
     -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -10px;
             box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -10px;
+    margin-bottom: 1rem;
   }
   .mobile-work .img-border img {
     width: 100%;
@@ -375,75 +371,6 @@
   }
   .mobile-work .buttons a {
     text-decoration: none;
-  }
-  .mobile-work .skills {
-    background-color: var(--main-col);
-    color: var(--main-bg);
-    padding: 25px;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-    position: relative;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  }
-  .mobile-work .skills h3 {
-    margin: 0px;
-    padding: 10px 0px;
-    text-align: center;
-    border-bottom: 3px solid var(--main-bg);
-  }
-  .mobile-work .skills-main {
-    max-height: 0px;
-    overflow: hidden;
-    -webkit-transition: max-height 1s;
-    transition: max-height 1s;
-  }
-  .mobile-work .skills-main > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-bottom: 1px dashed var(--main-bg);
-  }
-  .mobile-work .skills-main div > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 20px 0px;
-  }
-  .mobile-work .skills-main div > div:hover {
-    text-decoration: underline;
-  }
-  .mobile-work .skills-main img {
-    max-width: 130px;
-    margin-left: 25px;
-  }
-  .mobile-work .skills-main p {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-weight: 600;
-    letter-spacing: 3px;
-  }
-  .mobile-work .skills-main hr {
-    width: 10px;
-    margin-right: 10px;
   }
 }
 
@@ -468,11 +395,18 @@
   .mobile-work > * {
     margin-bottom: 100px;
   }
+  .mobile-work h3 {
+    margin: 2rem 0 0.5rem 0;
+  }
+  .mobile-work p {
+    line-height: 1.5rem;
+  }
   .mobile-work .img-border {
     border-radius: 10px;
     overflow: hidden;
     -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -10px;
             box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -10px;
+    margin-bottom: 1rem;
   }
   .mobile-work .img-border img {
     width: 100%;
@@ -515,73 +449,5 @@
   }
   .mobile-work .buttons a {
     text-decoration: none;
-  }
-  .mobile-work .skills {
-    background-color: var(--main-col);
-    color: var(--main-bg);
-    padding: 25px;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-    position: relative;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  }
-  .mobile-work .skills h3 {
-    margin: 0px;
-    text-align: center;
-    border-bottom: 3px solid var(--main-bg);
-  }
-  .mobile-work .skills-main {
-    max-height: 0px;
-    overflow: hidden;
-    -webkit-transition: max-height 1s;
-    transition: max-height 1s;
-  }
-  .mobile-work .skills-main > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-bottom: 1px dashed var(--main-bg);
-  }
-  .mobile-work .skills-main div > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 20px 0px;
-  }
-  .mobile-work .skills-main div > div:hover {
-    text-decoration: underline;
-  }
-  .mobile-work .skills-main img {
-    width: 50px;
-    margin-left: 10px;
-  }
-  .mobile-work .skills-main p {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-weight: 600;
-    letter-spacing: 3px;
-  }
-  .mobile-work .skills-main hr {
-    width: 10px;
-    margin-right: 10px;
   }
 }

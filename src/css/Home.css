@@ -125,6 +125,10 @@
   }
 }
 
+.cur {
+  visibility: hidden;
+}
+
 @media screen and (min-width: 992px) {
   /* start of desktop styles */
   main {
@@ -154,8 +158,6 @@
   .my-2 {
     font-size: 100px;
     margin: 0px;
-    -webkit-animation: blink 0.4s step-end infinite alternate;
-            animation: blink 0.4s step-end infinite alternate;
     -webkit-transition: border-color 0.2s;
     transition: border-color 0.2s;
     border-right: 3px solid;
@@ -164,15 +166,6 @@
     font-family: Nicolatte, monospace;
     opacity: 1;
     padding-right: 5px;
-  }
-  .my-2 ~ p,
-  .my-2 ~ a {
-    opacity: 0;
-    -webkit-animation: appear 2s 9s forwards;
-            animation: appear 2s 9s forwards;
-  }
-  .cur {
-    visibility: hidden;
   }
   .big-div {
     text-align: center;

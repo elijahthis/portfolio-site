@@ -47,6 +47,9 @@
   }
 }
 
+.cur {
+  visibility: hidden;
+}
 @media screen and (min-width: 992px) {
   /* start of desktop styles */
 
@@ -84,9 +87,6 @@
     // opacity: 0;
     // animation: appear 2s 9s forwards;
     // }
-  }
-  .cur {
-    visibility: hidden;
   }
 
   .big-div {
