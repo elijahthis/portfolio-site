@@ -25,15 +25,6 @@ import nextjsLogo from "../images/next-black.svg";
 const Work = () => {
   const previousWork = [
     {
-      title: "Felix Oyeleke Portfolio",
-      description:
-        "A portfolio website created for Felix Oyeleke, a hydrographic surveyor",
-      previewImage: felixPortfolioPreview,
-      link: "https://felixoyeleke.com/",
-      repo: "https://github.com/elijahthis/felix-oyeleke-portfolio",
-      tools: ["Next JS", "Sass"],
-    },
-    {
       title: "Live-Gists",
       description:
         "Live-Gists is an online realtime code collaboration,sharing and social media platform. It supports realtime pair coding with a role based system for editing and viewing. Share code snippets with the click of a button, like others gists, chat with other users and receive notifications on activities and messages through an always online push server, view feed and posts of other users you are following all in one platform.",
@@ -41,6 +32,15 @@ const Work = () => {
       link: "https://live-gists.netlify.app/",
       repo: "https://github.com/Regedit-msc/writty_client",
       tools: ["React JS", "CSS"],
+    },
+    {
+      title: "Felix Oyeleke Portfolio",
+      description:
+        "A portfolio website created for Felix Oyeleke, a hydrographic surveyor",
+      previewImage: felixPortfolioPreview,
+      link: "https://felixoyeleke.com/",
+      repo: "https://github.com/elijahthis/felix-oyeleke-portfolio",
+      tools: ["Next JS", "Sass"],
     },
     {
       title: "NERC Dashboard",
