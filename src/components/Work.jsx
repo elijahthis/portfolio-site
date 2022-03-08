@@ -3,7 +3,6 @@ import { NavContext } from "../Contexts/NavContext";
 import { Link } from "react-router-dom";
 import "../css/Work.css";
 // import "../css/main.css";
-import portfolioPreview from "../images/portfolio-preview.png";
 import felixPortfolioPreview from "../images/felix-portfolio.png";
 import NERCPreview from "../images/nerc-dashboard.png";
 import ankoraPreview from "../images/ankora-test.png";
@@ -11,7 +10,6 @@ import devfinderPreview from "../images/devfinder-preview.png";
 import LiveGistsPreview from "../images/Live-Gists-preview.png";
 import PlanetsFactSitePreview from "../images/Planets-Fact-Site-preview.png";
 import SimplenoteClonePreview from "../images/Simplenote-clone-prevew.png";
-import TodoAppPreview from "../images/Todo-app-preview.png";
 import htmlLogo from "../images/html-logo.png";
 import cssLogo from "../images/css-logo.png";
 import javascriptLogo from "../images/javascript-logo.png";
@@ -26,15 +24,6 @@ import nextjsLogo from "../images/next-black.svg";
 
 const Work = () => {
   const previousWork = [
-    {
-      title: "Portfolio",
-      description:
-        "My name is Elijah. I'm a Full-Stack Web Developer. Welcome to my portfolio website. Enjoy...",
-      previewImage: portfolioPreview,
-      link: "https://elijahthis-portfolio.netlify.app/",
-      repo: "https://github.com/elijahthis/portfolio-site",
-      tools: ["React JS", "Sass"],
-    },
     {
       title: "Felix Oyeleke Portfolio",
       description:
@@ -107,14 +96,6 @@ const Work = () => {
       link: "https://elijahthis-simplenoteclone.netlify.app/",
       repo: "https://github.com/elijahthis/simplenote-clone",
       tools: ["React JS", "Sass"],
-    },
-    {
-      title: "Todo App",
-      description: "Todo App using Vanilla JS ",
-      previewImage: TodoAppPreview,
-      link: "https://elijahthis-todoapp-cbf3b.netlify.app/",
-      repo: "https://github.com/elijahthis/Todo-App",
-      tools: ["HTML", "CSS", "JavaScript"],
     },
   ];
   const skills = [
