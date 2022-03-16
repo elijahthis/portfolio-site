@@ -45,7 +45,7 @@ const Work = () => {
     {
       title: "NERC Dashboard",
       description:
-        "Dashboard to manage mytos and discos for the National Electricity Regulatory Commission (NERC).",
+        "Dashboard to manage mytos and discos for the National Electricity Regulatory Commission (NERC). Passcode: 700000",
       previewImage: NERCPreview,
       link: "https://nerc-dashboard-mine.netlify.app/",
       repo: "https://github.com/elijahthis/nerc-dashboard-mine",
