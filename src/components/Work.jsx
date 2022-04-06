@@ -10,6 +10,7 @@ import devfinderPreview from "../images/devfinder-preview.png";
 import LiveGistsPreview from "../images/Live-Gists-preview.png";
 import PlanetsFactSitePreview from "../images/Planets-Fact-Site-preview.png";
 import SimplenoteClonePreview from "../images/Simplenote-clone-prevew.png";
+import TinyFacesPreview from "../images/tiny-faces-nft-preview.png";
 import htmlLogo from "../images/html-logo.png";
 import cssLogo from "../images/css-logo.png";
 import javascriptLogo from "../images/javascript-logo.png";
@@ -41,6 +42,14 @@ const Work = () => {
       link: "https://felixoyeleke.com/",
       repo: "https://github.com/elijahthis/felix-oyeleke-portfolio",
       tools: ["Next JS", "Sass"],
+    },
+    {
+      title: "TinyFaces NFT",
+      description: "A landing page created for an NFT platform",
+      previewImage: TinyFacesPreview,
+      link: "https://tiny-faces-nft.netlify.app/",
+      repo: "https://github.com/elijahthis/tiny-faces-nft",
+      tools: ["React JS", "Sass", "GSAP"],
     },
     {
       title: "NERC Dashboard",
