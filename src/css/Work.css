@@ -54,10 +54,39 @@
   }
 }
 
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .skills h3 {
   margin: 1.5rem 0;
   text-align: center;
   border-bottom: 3px solid var(--main-bg);
+}
+
+.skills-list {
+  list-style-type: square;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 1.2rem;
+          column-gap: 1.2rem;
+  row-gap: 0.5rem;
+  list-style-position: inside;
+  max-width: 600px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .skills-main {
@@ -372,6 +401,26 @@
   .mobile-work .buttons a {
     text-decoration: none;
   }
+  .skills h3 {
+    text-align: left;
+  }
+  .skills .skills-main ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    list-style-type: square;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 20px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -449,5 +498,25 @@
   }
   .mobile-work .buttons a {
     text-decoration: none;
+  }
+  .skills h3 {
+    text-align: left;
+  }
+  .skills .skills-main ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    list-style-type: square;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 20px;
   }
 }
