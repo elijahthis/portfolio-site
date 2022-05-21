@@ -1,4 +1,7 @@
 import React, { useEffect, useContext } from "react";
+import Rotate from "react-reveal/Rotate";
+import Zoom from "react-reveal/Zoom";
+import Slide from "react-reveal/Slide";
 import { NavContext } from "../Contexts/NavContext";
 import "../css/Contact.css";
 import { Link } from "react-router-dom";
@@ -101,79 +104,93 @@ const Contact = () => {
     };
     return (
         <>
-            <section className="contact-section">
-                <h2>Work with me!</h2>
-                <p className="collab">
-                    Do you have a question, proposal or idea you would like us
-                    to collaborate on? Hit me up...
-                </p>
+            <section className="contact-section" id="Contact">
+                <Rotate bottom left duration={700}>
+                    <h2>Work with me!</h2>
+                </Rotate>
+                <Rotate bottom left duration={700} delay={700}>
+                    <p className="collab">
+                        Do you have a question, proposal or idea you would like
+                        us to collaborate on? Hit me up...
+                    </p>
+                </Rotate>
                 <form onSubmit={sendEmail}>
                     <div>
-                        <label>
-                            Name
-                            <input
-                                type="text"
-                                name="from_name"
-                                placeholder="What's your name?"
-                                required
-                            />
-                        </label>
-                        <label>
-                            Email Address
-                            <input
-                                type="email"
-                                name="from_email"
-                                placeholder="What's your email address?"
-                                required
-                            />
-                        </label>
+                        <Zoom right duration={700} delay={1400}>
+                            <label>
+                                Name
+                                <input
+                                    type="text"
+                                    name="from_name"
+                                    placeholder="What's your name?"
+                                    required
+                                />
+                            </label>
+                        </Zoom>
+                        <Zoom right delay={1900}>
+                            <label>
+                                Email Address
+                                <input
+                                    type="email"
+                                    name="from_email"
+                                    placeholder="What's your email address?"
+                                    required
+                                />
+                            </label>
+                        </Zoom>
                     </div>
-                    <div>
-                        <label>
-                            Message
-                            <textarea
-                                style={{ height: "100px" }}
-                                name="message"
-                                placeholder="Hello. I'd love to work with you!"
-                                required
-                            ></textarea>
-                        </label>
-                    </div>
-                    <span className="btn">
-                        <div style={{ margin: 0 }}>Send Message</div>
-                        <svg
-                            x="0px"
-                            y="0px"
-                            viewBox="0 0 1000 1000"
-                            enableBackground="new 0 0 1000 1000"
-                            xmlSpace="preserve"
-                        >
-                            <g>
-                                <g transform="matrix(1 0 0 -1 0 1008)">
-                                    <path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z" />
+                    <Zoom right delay={2400}>
+                        <div>
+                            <label>
+                                Message
+                                <textarea
+                                    style={{ height: "100px" }}
+                                    name="message"
+                                    placeholder="Hello. I'd love to work with you!"
+                                    required
+                                ></textarea>
+                            </label>
+                        </div>
+                    </Zoom>
+                    <Zoom right delay={2900}>
+                        <span className="btn">
+                            <div style={{ margin: 0 }}>Send Message</div>
+                            <svg
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 1000 1000"
+                                enableBackground="new 0 0 1000 1000"
+                                xmlSpace="preserve"
+                            >
+                                <g>
+                                    <g transform="matrix(1 0 0 -1 0 1008)">
+                                        <path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z" />
+                                    </g>
                                 </g>
-                            </g>
-                        </svg>
-                        <input
-                            type="submit"
-                            name="submit"
-                            value="Send Message"
-                        />
-                    </span>
+                            </svg>
+                            <input
+                                type="submit"
+                                name="submit"
+                                value="Send Message"
+                            />
+                        </span>
+                    </Zoom>
                 </form>
-                <div className="contacts">
-                    {contactMethods.map((method, i) => (
-                        <a
-                            href={method.link}
-                            target="_blank"
-                            rel="noreferrer"
-                            key={i}
-                        >
-                            <div>{method.image}</div>
-                        </a>
-                    ))}
-                </div>
-                <Link to="/interests">
+                <Slide bottom delay={3000} duration={400}>
+                    <div className="contacts">
+                        {contactMethods.map((method, i) => (
+                            <a
+                                href={method.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                key={i}
+                            >
+                                <div>{method.image}</div>
+                            </a>
+                        ))}
+                    </div>
+                </Slide>
+                <Link to="#interests">
                     <div className="nav-arrow">
                         <svg
                             width="6"

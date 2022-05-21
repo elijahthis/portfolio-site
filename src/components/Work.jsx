@@ -1,6 +1,8 @@
 import React, { useEffect, useContext, useState } from "react";
 import { NavContext } from "../Contexts/NavContext";
 import { Link } from "react-router-dom";
+import Zoom from "react-reveal/Zoom";
+import Rotate from "react-reveal/Rotate";
 import "../css/Work.css";
 // import "../css/main.css";
 import felixPortfolioPreview from "../images/felix-portfolio.png";
@@ -127,127 +129,43 @@ const Work = () => {
         ["Material UI (MUI)"],
     ];
 
-    const [sliderInd, setSliderInd] = useState(0);
-    const { setInd } = useContext(NavContext);
-    const handleSlide = (ev) => {
-        if (ev.currentTarget.id === "arrow_right") {
-            setSliderInd((sliderInd + 1) % previousWork.length);
-        } else {
-            setSliderInd(
-                (sliderInd - 1 + previousWork.length) % previousWork.length
-            );
-        }
-    };
-
-    const arrows = [
-        <svg
-            enableBackground="new 0 0 96 96"
-            height="96px"
-            id="arrow_left"
-            version="1.1"
-            viewBox="0 0 96 96"
-            width="96px"
-            xmlSpace="preserve"
-            onClick={handleSlide}
-        >
-            <path d="M12,52h62.344L52.888,73.456c-1.562,1.562-1.562,4.095-0.001,5.656c1.562,1.562,4.096,1.562,5.658,0l28.283-28.284l0,0  c0.186-0.186,0.352-0.391,0.498-0.609c0.067-0.101,0.114-0.21,0.172-0.315c0.066-0.124,0.142-0.242,0.195-0.373  c0.057-0.135,0.089-0.275,0.129-0.415c0.033-0.111,0.076-0.217,0.099-0.331C87.973,48.525,88,48.263,88,48l0,0  c0-0.003-0.001-0.006-0.001-0.009c-0.001-0.259-0.027-0.519-0.078-0.774c-0.024-0.12-0.069-0.231-0.104-0.349  c-0.039-0.133-0.069-0.268-0.123-0.397c-0.058-0.139-0.136-0.265-0.208-0.396c-0.054-0.098-0.097-0.198-0.159-0.292  c-0.146-0.221-0.314-0.427-0.501-0.614L58.544,16.888c-1.562-1.562-4.095-1.562-5.657-0.001c-1.562,1.562-1.562,4.095,0,5.658  L74.343,44L12,44c-2.209,0-4,1.791-4,4C8,50.209,9.791,52,12,52z" />
-        </svg>,
-        <svg
-            enableBackground="new 0 0 96 96"
-            height="96px"
-            id="arrow_right"
-            version="1.1"
-            viewBox="0 0 96 96"
-            width="96px"
-            xmlSpace="preserve"
-            onClick={handleSlide}
-        >
-            <path d="M12,52h62.344L52.888,73.456c-1.562,1.562-1.562,4.095-0.001,5.656c1.562,1.562,4.096,1.562,5.658,0l28.283-28.284l0,0  c0.186-0.186,0.352-0.391,0.498-0.609c0.067-0.101,0.114-0.21,0.172-0.315c0.066-0.124,0.142-0.242,0.195-0.373  c0.057-0.135,0.089-0.275,0.129-0.415c0.033-0.111,0.076-0.217,0.099-0.331C87.973,48.525,88,48.263,88,48l0,0  c0-0.003-0.001-0.006-0.001-0.009c-0.001-0.259-0.027-0.519-0.078-0.774c-0.024-0.12-0.069-0.231-0.104-0.349  c-0.039-0.133-0.069-0.268-0.123-0.397c-0.058-0.139-0.136-0.265-0.208-0.396c-0.054-0.098-0.097-0.198-0.159-0.292  c-0.146-0.221-0.314-0.427-0.501-0.614L58.544,16.888c-1.562-1.562-4.095-1.562-5.657-0.001c-1.562,1.562-1.562,4.095,0,5.658  L74.343,44L12,44c-2.209,0-4,1.791-4,4C8,50.209,9.791,52,12,52z" />
-        </svg>,
-    ];
-
-    useEffect(() => {
-        const slide = setInterval(() => {
-            setSliderInd((sliderInd) => (sliderInd + 1) % previousWork.length);
-        }, 7000);
-        setInd(1);
-        return () => clearInterval(slide);
-    });
-
     return (
         <>
-            <div className="my-work">
-                <h2>My work</h2>
+            <div className="my-work" id="Work">
+                <Rotate bottom left duration={700}>
+                    <h2>My work</h2>
+                </Rotate>
 
-                <div className="banner-wrapper">
-                    <div className="banner">
-                        <img
-                            src={previousWork[sliderInd].previewImage}
-                            className="front-image"
-                            alt="job preview"
-                        />
-                        <div className="left-shutter"></div>
-                        <div className="right-shutter"></div>
-                        <div className="info">
-                            <h3>{previousWork[sliderInd].title}</h3>
-                            <p>{previousWork[sliderInd].description}</p>
-                            <div className="tools">
-                                {previousWork[sliderInd].tools.map(
-                                    (tool, ind) => (
-                                        <p key={ind}>{tool}</p>
-                                    )
-                                )}
-                            </div>
-                            <div className="buttons">
-                                <a
-                                    href={previousWork[sliderInd].link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <span className="button view">
-                                        View live
-                                    </span>
-                                </a>
-                                <a
-                                    href={previousWork[sliderInd].repo}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <span className="button view">
-                                        View repo
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="slider-arrows">
-                        {arrows[0]}
-                        {arrows[1]}
-                    </div>
-                    <div className="slider-navigation">
-                        {previousWork.map((workitem, key) => (
-                            <span
-                                key={key}
-                                className={sliderInd === key ? "focus" : ""}
-                                onClick={() => setSliderInd(key)}
-                            ></span>
+                <div>
+                    <div className="work-items">
+                        {previousWork.map((workitem, ind) => (
+                            <Zoom right delay={700 + 500 * ind} key={ind}>
+                                <div>
+                                    <div className="img-wrapper">
+                                        <img
+                                            src={workitem.previewImage}
+                                            alt=""
+                                            className=""
+                                        />
+                                        <div></div>
+                                    </div>
+                                    <h3>{workitem.title}</h3>
+                                    <p>{workitem.description}</p>
+                                </div>
+                            </Zoom>
                         ))}
                     </div>
-                    <div className="skills">
-                        <h3>Skills</h3>
-                        <ul className="skills-list">
-                            {skills.map((skill, ind) => (
-                                <li key={ind}>{skills[ind][0]}</li>
-                            ))}
-                        </ul>
-                        {/* <div className="skills-main">
-                            {skills.map((skill, ind) => (
-                                <img src={skill[1]} alt={skill[0]} key={ind} />
-                            ))}
-                        </div> */}
-                    </div>
+                    <Zoom right>
+                        <div className="skills" id="skills">
+                            <ul className="skills-list">
+                                {skills.map((skill, ind) => (
+                                    <li key={ind}>{skills[ind][0]}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </Zoom>
 
-                    <Link to="/contact">
+                    <Link to="#contact">
                         <div className="nav-arrow">
                             <svg
                                 width="6"
@@ -262,54 +180,58 @@ const Work = () => {
                 </div>
                 <div className="mobile-work">
                     {previousWork.map((workitem, ind) => (
-                        <div key={ind}>
-                            <div className="img-border">
-                                <img
-                                    src={workitem.previewImage}
-                                    className="front-image"
-                                    alt="job preview"
-                                />
+                        <Zoom right delay={700} key={ind}>
+                            <div>
+                                <div className="img-border">
+                                    <img
+                                        src={workitem.previewImage}
+                                        className="front-image"
+                                        alt="job preview"
+                                    />
+                                </div>
+                                <h3>{workitem.title}</h3>
+                                <p>{workitem.description}</p>
+                                <div className="tools">
+                                    {workitem.tools.map((tool, i) => (
+                                        <p key={i}>{tool}</p>
+                                    ))}
+                                </div>
+                                <div className="buttons">
+                                    <a
+                                        href={workitem.link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <span className="button view">
+                                            View live
+                                        </span>
+                                    </a>
+                                    <a
+                                        href={workitem.repo}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <span className="button view">
+                                            View repo
+                                        </span>
+                                    </a>
+                                </div>
+                                <hr />
                             </div>
-                            <h3>{workitem.title}</h3>
-                            <p>{workitem.description}</p>
-                            <div className="tools">
-                                {workitem.tools.map((tool, i) => (
-                                    <p key={i}>{tool}</p>
-                                ))}
-                            </div>
-                            <div className="buttons">
-                                <a
-                                    href={workitem.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <span className="button view">
-                                        View live
-                                    </span>
-                                </a>
-                                <a
-                                    href={workitem.repo}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <span className="button view">
-                                        View repo
-                                    </span>
-                                </a>
-                            </div>
-                            <hr />
-                        </div>
+                        </Zoom>
                     ))}
-                    <div className="skills">
-                        <h3>Skills</h3>
-                        <div className="skills-main">
-                            <ul>
-                                {skills.map((skill, ind) => (
-                                    <li key={ind}>{skills[ind][0]}</li>
-                                ))}
-                            </ul>
+                    <Zoom right>
+                        <div className="skills">
+                            <h3>Skills</h3>
+                            <div className="skills-main">
+                                <ul>
+                                    {skills.map((skill, ind) => (
+                                        <li key={ind}>{skills[ind][0]}</li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                    </Zoom>
                     <Link to="/contact">
                         <div className="nav-arrow">
                             <svg

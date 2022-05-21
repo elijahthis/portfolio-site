@@ -1,457 +1,469 @@
 @import "config";
 
 @keyframes zoomBounce {
-  0% {
-    scale: 0;
-    opacity: 0;
-  }
-  30% {
-    scale: 0.3;
-    opacity: 0.8;
-  }
-  50% {
-    scale: 1.2;
-    opacity: 1;
-  }
-  70% {
-    scale: 0.8;
-    opacity: 1;
-  }
-  100% {
-    scale: 1;
-    opacity: 1;
-  }
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+    30% {
+        scale: 0.3;
+        opacity: 0.8;
+    }
+    50% {
+        scale: 1.2;
+        opacity: 1;
+    }
+    70% {
+        scale: 0.8;
+        opacity: 1;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
+    from {
+        width: 0;
+    }
 }
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+    50% {
+        border-color: transparent;
+    }
 }
 @keyframes show {
-  from {
-    visibility: hidden;
-  }
-  to {
-    visibility: visible;
-  }
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
 }
 @keyframes growIn {
-  100% {
-    transform: scale(1);
-  }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .cur {
-  visibility: hidden;
+    visibility: hidden;
 }
+
+.index-page {
+    & > * {
+        padding-bottom: 60px !important;
+    }
+}
+
 @media screen and (min-width: 992px) {
-  /* start of desktop styles */
+    /* start of desktop styles */
 
-  main {
-    height: 620px;
+    main {
+        height: 100%;
+        min-height: calc(100vh - 80px);
+        max-height: 1500px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .my-1 {
-    font-size: 50px;
-    margin: 0px;
-    opacity: 0;
-    font-family: Nicolatte, monospace;
-
-    animation: zoomBounce 2s 2s forwards;
-  }
-  .my-2 {
-    font-size: 100px;
-    margin: 0px;
-    // animation: blink 0.4s step-end infinite alternate;
-    transition: border-color 0.2s;
-    border-right: 3px solid;
-    overflow: hidden;
-    white-space: nowrap;
-    font-family: Nicolatte, monospace;
-    opacity: 1;
-    padding-right: 5px;
-
-    // & ~ p,
-    // & ~ a {
-    // opacity: 0;
-    // animation: appear 2s 9s forwards;
-    // }
-  }
-
-  .big-div {
-    text-align: center;
-    //   border: 1px solid black;
-    padding: 50px;
-    border-radius: 10%;
-    z-index: 2;
-  }
-
-  .about-div {
-    position: absolute;
-    width: 100%;
-    height: 620px;
-    box-sizing: border-box;
-    padding: var(--padding-val);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    & > :nth-child(2),
-    :nth-child(4) {
-      display: flex;
-      flex-direction: row;
-      justify-content: right;
-    }
-  }
-
-  .about-text {
-    width: 200px;
-    opacity: 0;
-    animation: appear 2s 7s forwards;
-    span {
-      display: block;
-      padding: 10px;
-      transition: transform 1s ease-in;
-      color: var(--main-col);
-      &:hover {
-        padding-left: 9px;
-        border-left: 1px solid var(--main-col);
-        transform: scale(1.08);
-      }
-    }
-  }
-
-  #magic {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  #arr {
-    height: 20px;
-    width: 40px;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    position: absolute;
-    right: 10%;
-    opacity: 0;
-    transition: all ease-in-out 1s;
-    svg {
-      width: 100%;
-      fill: var(--main-bg);
-    }
-  }
-  .button {
-    background-color: var(--main-col);
-    color: var(--main-bg);
-    padding: 20px;
-    transition: all 1s;
-    position: relative;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-
-    span {
-      margin-right: 0px;
-      transition: margin 1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    &:hover {
-      cursor: pointer;
-      & > #arr {
+    .my-1 {
+        font-size: 50px;
+        margin: 0px;
+        opacity: 0;
+        font-family: Nicolatte, monospace;
+
+        animation: zoomBounce 2s 2s forwards;
+    }
+    .my-2 {
+        font-size: 100px;
+        margin: 0px;
+        // animation: blink 0.4s step-end infinite alternate;
+        transition: border-color 0.2s;
+        border-right: 3px solid;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: Nicolatte, monospace;
         opacity: 1;
-      }
-      & > span {
-        margin-right: 60px;
-      }
+        padding-right: 5px;
+
+        // & ~ p,
+        // & ~ a {
+        // opacity: 0;
+        // animation: appear 2s 9s forwards;
+        // }
     }
-  }
+
+    .big-div {
+        text-align: center;
+        //   border: 1px solid black;
+        padding: 50px;
+        border-radius: 10%;
+        z-index: 2;
+    }
+
+    .about-div {
+        position: absolute;
+        width: 100%;
+        height: 620px;
+        box-sizing: border-box;
+        padding: var(--padding-val);
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        & > :nth-child(2),
+        :nth-child(4) {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+        }
+    }
+
+    .about-text {
+        width: 200px;
+        opacity: 0;
+        animation: appear 2s 7s forwards;
+        span {
+            display: block;
+            padding: 10px;
+            transition: transform 1s ease-in;
+            color: var(--main-col);
+            &:hover {
+                padding-left: 9px;
+                border-left: 1px solid var(--main-col);
+                transform: scale(1.08);
+            }
+        }
+    }
+
+    #magic {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    #arr {
+        height: 20px;
+        width: 40px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        position: absolute;
+        right: 10%;
+        opacity: 0;
+        transition: all ease-in-out 1s;
+        svg {
+            width: 100%;
+            fill: var(--main-bg);
+        }
+    }
+    .button {
+        background-color: var(--main-col);
+        color: var(--main-bg);
+        padding: 20px;
+        transition: all 1s;
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+        span {
+            margin-right: 0px;
+            transition: margin 1s;
+        }
+
+        &:hover {
+            cursor: pointer;
+            & > #arr {
+                opacity: 1;
+            }
+            & > span {
+                margin-right: 60px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 991px) {
-  /* start of tablet styles */
+    /* start of tablet styles */
 
-  main {
-    height: 620px;
+    main {
+        min-height: 620px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .my-1 {
-    font-size: 50px;
-    margin: 0px;
-    opacity: 0;
-    font-family: Nicolatte, monospace;
-
-    animation: zoomBounce 2s 2s forwards;
-  }
-  .my-2 {
-    font-size: 100px;
-    margin: 0px;
-    animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6),
-      blink 0.5s step-end infinite alternate;
-    border-right: 3px solid;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 6ch;
-    font-family: Nicolatte, monospace;
-    opacity: 1;
-    visibility: hidden;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-
-    & ~ p,
-    & ~ a {
-      opacity: 0;
-      animation: appear 2s 9s forwards;
-    }
-  }
-
-  .big-div {
-    text-align: center;
-    //   border: 1px solid black;
-    padding: 50px;
-    border-radius: 10%;
-    z-index: 2;
-  }
-
-  .about-div {
-    position: absolute;
-    top: 500px;
-    width: 100%;
-    height: 620px;
-    box-sizing: border-box;
-    padding: var(--padding-val);
-    background-color: var(--main-bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    & > :nth-child(2),
-    :nth-child(4) {
-      display: flex;
-      flex-direction: row;
-      justify-content: right;
-    }
-  }
-
-  .about-text {
-    width: 200px;
-    opacity: 0;
-    animation: appear 2s 7s forwards;
-    span {
-      display: block;
-      padding: 10px;
-      transition: all 1s ease-in;
-      &:hover {
-        padding-left: 9px;
-        border-left: 1px solid var(--main-col);
-        scale: 1.1;
-      }
-    }
-  }
-
-  #magic {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  #arr {
-    height: 20px;
-    width: 40px;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    position: absolute;
-    right: 10%;
-    opacity: 0;
-    transition: all ease-in-out 1s;
-    svg {
-      width: 100%;
-      fill: var(--main-bg);
-    }
-  }
-  .button {
-    background-color: var(--main-col);
-    color: var(--main-bg);
-    padding: 20px;
-    transition: all 1s;
-    position: relative;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-
-    span {
-      margin-right: 0px;
-      transition: all 1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    &:hover {
-      cursor: pointer;
-      & > #arr {
+    .my-1 {
+        font-size: 50px;
+        margin: 0px;
+        opacity: 0;
+        font-family: Nicolatte, monospace;
+
+        animation: zoomBounce 2s 2s forwards;
+    }
+    .my-2 {
+        font-size: 100px;
+        margin: 0px;
+        animation: show 1s 4.5s forwards, typing 2s 4.5s steps(6),
+            blink 0.5s step-end infinite alternate;
+        border-right: 3px solid;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 6ch;
+        font-family: Nicolatte, monospace;
         opacity: 1;
-      }
-      & > span {
-        margin-right: 60px;
-      }
+        visibility: hidden;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+
+        & ~ p,
+        & ~ a {
+            opacity: 0;
+            animation: appear 2s 9s forwards;
+        }
     }
-    h3 {
-      margin: 0px;
+
+    .big-div {
+        margin-top: 30%;
+        position: relative;
+        text-align: center;
+        //   border: 1px solid black;
+        padding: 50px;
+        border-radius: 10%;
+        z-index: 2;
     }
-  }
+
+    .about-div {
+        position: relative;
+        // top: 500px;
+        width: 100%;
+        height: 620px;
+        box-sizing: border-box;
+        padding: var(--padding-val);
+        background-color: var(--main-bg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        & > :nth-child(2),
+        :nth-child(4) {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+        }
+    }
+
+    .about-text {
+        width: 200px;
+        opacity: 0;
+        animation: appear 2s 7s forwards;
+        span {
+            display: block;
+            padding: 10px;
+            transition: all 1s ease-in;
+            &:hover {
+                padding-left: 9px;
+                border-left: 1px solid var(--main-col);
+                scale: 1.1;
+            }
+        }
+    }
+
+    #magic {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    #arr {
+        height: 20px;
+        width: 40px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        position: absolute;
+        right: 10%;
+        opacity: 0;
+        transition: all ease-in-out 1s;
+        svg {
+            width: 100%;
+            fill: var(--main-bg);
+        }
+    }
+    .button {
+        background-color: var(--main-col);
+        color: var(--main-bg);
+        padding: 20px;
+        transition: all 1s;
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+        span {
+            margin-right: 0px;
+            transition: all 1s;
+        }
+
+        &:hover {
+            cursor: pointer;
+            & > #arr {
+                opacity: 1;
+            }
+            & > span {
+                margin-right: 60px;
+            }
+        }
+        h3 {
+            margin: 0px;
+        }
+    }
 }
 
 @media screen and (max-width: 479px) {
-  /* start of phone styles */
+    /* start of phone styles */
 
-  main {
-    height: 620px;
+    main {
+        min-height: 620px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .my-1 {
-    font-size: 35px;
-    margin: 0px;
-    opacity: 0;
-    font-family: Nicolatte, monospace;
-
-    animation: zoomBounce 1s 1s forwards;
-  }
-  .my-2 {
-    font-size: 75px;
-    margin: 0px;
-    animation: show 1s 2.5s forwards, typing 2s 2.5s steps(6),
-      blink 0.5s step-end infinite alternate;
-    border-right: 3px solid;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 6ch;
-    font-family: Nicolatte, monospace;
-    opacity: 1;
-    visibility: hidden;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-
-    & ~ p,
-    & ~ a {
-      opacity: 0;
-      animation: appear 2s 9s forwards;
-    }
-  }
-
-  .big-div {
-    text-align: center;
-    //   border: 1px solid black;
-    padding: 50px;
-    border-radius: 10%;
-    z-index: 2;
-  }
-
-  .about-div {
-    position: absolute;
-    top: 500px;
-    width: 100%;
-    height: 620px;
-    box-sizing: border-box;
-    padding: var(--padding-val);
-    background-color: var(--main-bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    transition: background-color 1s;
-
-    & > :nth-child(2),
-    :nth-child(4) {
-      display: flex;
-      flex-direction: row;
-      justify-content: right;
-    }
-  }
-
-  .about-text {
-    width: 200px;
-    opacity: 0;
-    animation: appear 2s 7s forwards;
-    span {
-      display: block;
-      padding: 10px;
-      transition: transform 1s ease-in;
-      &:hover {
-        padding-left: 9px;
-        border-left: 1px solid var(--main-col);
-        transform: scale(1.05);
-      }
-    }
-  }
-
-  #magic {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  #arr {
-    height: 20px;
-    width: 40px;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    position: absolute;
-    right: 10%;
-    opacity: 0;
-    transition: all ease-in-out 1s;
-    svg {
-      width: 100%;
-      fill: var(--main-bg);
-    }
-  }
-  .button {
-    background-color: var(--main-col);
-    color: var(--main-bg);
-    padding: 15px;
-    transition: all 1s;
-    position: relative;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-
-    span {
-      margin-right: 0px;
-      transition: all 1s;
-    }
-    h3 {
-      margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    &:hover {
-      cursor: pointer;
-      & > #arr {
+    .my-1 {
+        font-size: 35px;
+        margin: 0px;
+        opacity: 0;
+        font-family: Nicolatte, monospace;
+
+        animation: zoomBounce 1s 1s forwards;
+    }
+    .my-2 {
+        font-size: 75px;
+        margin: 0px;
+        animation: show 1s 2.5s forwards, typing 2s 2.5s steps(6),
+            blink 0.5s step-end infinite alternate;
+        border-right: 3px solid;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 6ch;
+        font-family: Nicolatte, monospace;
         opacity: 1;
-      }
-      & > span {
-        margin-right: 60px;
-      }
+        visibility: hidden;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+
+        & ~ p,
+        & ~ a {
+            opacity: 0;
+            animation: appear 2s 9s forwards;
+        }
     }
-  }
+
+    .big-div {
+        margin-top: 50%;
+        text-align: center;
+        //   border: 1px solid black;
+        padding: 50px;
+        border-radius: 10%;
+        z-index: 2;
+    }
+
+    .about-div {
+        position: relative;
+        // top: 500px;
+        width: 100%;
+        height: 620px;
+        box-sizing: border-box;
+        padding: var(--padding-val);
+        background-color: var(--main-bg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: background-color 1s;
+
+        & > :nth-child(2),
+        :nth-child(4) {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+        }
+    }
+
+    .about-text {
+        width: 200px;
+        opacity: 0;
+        animation: appear 2s 7s forwards;
+        span {
+            display: block;
+            padding: 10px;
+            transition: transform 1s ease-in;
+            &:hover {
+                padding-left: 9px;
+                border-left: 1px solid var(--main-col);
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    #magic {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    #arr {
+        height: 20px;
+        width: 40px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        position: absolute;
+        right: 10%;
+        opacity: 0;
+        transition: all ease-in-out 1s;
+        svg {
+            width: 100%;
+            fill: var(--main-bg);
+        }
+    }
+    .button {
+        background-color: var(--main-col);
+        color: var(--main-bg);
+        padding: 15px;
+        transition: all 1s;
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+        span {
+            margin-right: 0px;
+            transition: all 1s;
+        }
+        h3 {
+            margin: 0px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            & > #arr {
+                opacity: 1;
+            }
+            & > span {
+                margin-right: 60px;
+            }
+        }
+    }
 }

@@ -32,6 +32,7 @@
     -ms-grid-rows: 121px 1fr;
         grid-template-rows: 121px 1fr;
     --grid-box-height: 246px;
+    padding: 10px 100px;
   }
   .interests-grid {
     display: -ms-grid;
