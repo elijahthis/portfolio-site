@@ -104,7 +104,7 @@ const Contact = () => {
     };
     return (
         <>
-            <section className="contact-section" id="Contact">
+            <section className="contact-section" id="Contact" name='Contact'>
                 <Rotate bottom left duration={700}>
                     <h2>Work with me!</h2>
                 </Rotate>

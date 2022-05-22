@@ -22,7 +22,7 @@ const Home = () => {
 
     return (
         <>
-            <main>
+            <main id="Home" name="Home">
                 <div className="big-div">
                     <h3 className="my-1">My name is...</h3>
                     <Typewriter

@@ -1,5 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
-import { NavContext } from "../Contexts/NavContext";
+import React from "react";
 import { Link } from "react-router-dom";
 import Zoom from "react-reveal/Zoom";
 import Rotate from "react-reveal/Rotate";
@@ -131,7 +130,7 @@ const Work = () => {
 
     return (
         <>
-            <div className="my-work" id="Work">
+            <div className="my-work" id="Work" name="Work">
                 <Rotate bottom left duration={700}>
                     <h2>My work</h2>
                 </Rotate>

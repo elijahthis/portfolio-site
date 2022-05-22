@@ -18,7 +18,11 @@ const Interests = () => {
 
     return (
         <>
-            <section className="interests-section" id="Interests">
+            <section
+                className="interests-section"
+                id="Interests"
+                name="Interests"
+            >
                 <Rotate bottom left duration={700}>
                     <h2>I like to...</h2>
                 </Rotate>
