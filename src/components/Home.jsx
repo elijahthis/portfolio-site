@@ -42,7 +42,7 @@ const Home = () => {
                     <p style={{ marginBottom: "10px" }}>
                         I'm a Frontend Engineer
                     </p>
-                    <Link to="#contact" id="magic">
+                    <Link to="#Contact" id="magic">
                         <p className="button">
                             <span>Let's make magic!</span>
                             <div id="arr">
