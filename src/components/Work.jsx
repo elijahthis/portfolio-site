@@ -140,14 +140,20 @@ const Work = () => {
                         {previousWork.map((workitem, ind) => (
                             <Zoom right delay={700 + 500 * ind} key={ind}>
                                 <div>
-                                    <div className="img-wrapper">
-                                        <img
-                                            src={workitem.previewImage}
-                                            alt=""
-                                            className=""
-                                        />
-                                        <div></div>
-                                    </div>
+                                    <a
+                                        href={workitem.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <div className="img-wrapper">
+                                            <img
+                                                src={workitem.previewImage}
+                                                alt=""
+                                                className=""
+                                            />
+                                            <div></div>
+                                        </div>
+                                    </a>
                                     <h3>{workitem.title}</h3>
                                     <p>{workitem.description}</p>
                                 </div>
