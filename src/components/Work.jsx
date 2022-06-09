@@ -6,7 +6,7 @@ import "../css/Work.css";
 // import "../css/main.css";
 import felixPortfolioPreview from "../images/felix-portfolio.png";
 import NERCPreview from "../images/nerc-dashboard.png";
-import ankoraPreview from "../images/ankora-test.png";
+import tasksMePreview from "../images/tasks-me-preview.png";
 import devfinderPreview from "../images/devfinder-preview.png";
 import LiveGistsPreview from "../images/Live-Gists-preview.png";
 import PlanetsFactSitePreview from "../images/Planets-Fact-Site-preview.png";
@@ -32,7 +32,7 @@ const Work = () => {
             previewImage: LiveGistsPreview,
             link: "https://live-gists.netlify.app/",
             repo: "https://github.com/Regedit-msc/writty_client",
-            tools: ["React JS", "CSS"],
+            // tools: ["React JS", "CSS"],
         },
         {
             title: "Felix Oyeleke Portfolio",
@@ -41,7 +41,7 @@ const Work = () => {
             previewImage: felixPortfolioPreview,
             link: "https://felixoyeleke.com/",
             repo: "https://github.com/elijahthis/felix-oyeleke-portfolio",
-            tools: ["Next JS", "Sass"],
+            // tools: ["Next JS", "Sass"],
         },
         {
             title: "TinyFaces NFT",
@@ -49,7 +49,7 @@ const Work = () => {
             previewImage: TinyFacesPreview,
             link: "https://tiny-faces-nft.netlify.app/",
             repo: "https://github.com/elijahthis/tiny-faces-nft",
-            tools: ["React JS", "Sass", "GSAP"],
+            // tools: ["React JS", "Sass", "GSAP"],
         },
         {
             title: "NERC Dashboard",
@@ -58,16 +58,16 @@ const Work = () => {
             previewImage: NERCPreview,
             link: "https://nerc-dashboard-mine.netlify.app/",
             repo: "https://github.com/elijahthis/nerc-dashboard-mine",
-            tools: ["React JS", "Sass", "API"],
+            // tools: ["React JS", "Sass", "API"],
         },
         {
-            title: "Ankora Scheduler",
+            title: "Tasks Me",
             description:
-                "A calendar dashboard implemented as a test for Ankora Health. It manages appointments and schedules of nurses and patients.",
-            previewImage: ankoraPreview,
-            link: "https://elijahthis-ankora-test.netlify.app",
-            repo: "https://github.com/elijahthis/ankora-test",
-            tools: ["React JS", "Sass"],
+                "One-stop calendar to keep track of all your tasks and events",
+            previewImage: tasksMePreview,
+            link: "https://tasks-me.netlify.app",
+            repo: "https://github.com/elijahthis/tasks-me",
+            // tools: ["React JS", "Sass"],
         },
         {
             title: "devfinder",
@@ -76,7 +76,7 @@ const Work = () => {
             previewImage: devfinderPreview,
             link: "https://elijahthis-devfinder.netlify.app/",
             repo: "https://github.com/elijahthis/devfinder",
-            tools: ["React JS", "CSS", "API"],
+            // tools: ["React JS", "CSS"],
         },
         {
             title: "Planets Fact Site",
@@ -85,7 +85,7 @@ const Work = () => {
             previewImage: PlanetsFactSitePreview,
             link: "https://elijahthis-planet-fact-site.netlify.app/",
             repo: "https://github.com/elijahthis/planets-fact-site",
-            tools: ["React JS", "Sass"],
+            // tools: ["React JS", "Sass"],
         },
         {
             title: "Simplenote Clone",
@@ -105,7 +105,7 @@ const Work = () => {
             previewImage: SimplenoteClonePreview,
             link: "https://elijahthis-simplenoteclone.netlify.app/",
             repo: "https://github.com/elijahthis/simplenote-clone",
-            tools: ["React JS", "Sass"],
+            // tools: ["React JS", "Sass"],
         },
     ];
     const skills = [
@@ -196,11 +196,11 @@ const Work = () => {
                                 </div>
                                 <h3>{workitem.title}</h3>
                                 <p>{workitem.description}</p>
-                                <div className="tools">
+                                {/* <div className="tools">
                                     {workitem.tools.map((tool, i) => (
                                         <p key={i}>{tool}</p>
                                     ))}
-                                </div>
+                                </div> */}
                                 <div className="buttons">
                                     <a
                                         href={workitem.link}
