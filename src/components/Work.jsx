@@ -34,6 +34,32 @@ const Work = () => {
             repo: "https://github.com/Regedit-msc/writty_client",
             // tools: ["React JS", "CSS"],
         },
+         {
+            title: "Tasks Me",
+            description:
+                "One-stop calendar to keep track of all your tasks and events",
+            previewImage: tasksMePreview,
+            link: "https://tasks-me.netlify.app",
+            repo: "https://github.com/elijahthis/tasks-me",
+            // tools: ["React JS", "Sass"],
+        },
+        {
+            title: "NERC Dashboard",
+            description:
+                "Dashboard to manage mytos and discos for the National Electricity Regulatory Commission (NERC). Passcode: 700000",
+            previewImage: NERCPreview,
+            link: "https://nerc-dashboard-mine.netlify.app/",
+            repo: "https://github.com/elijahthis/nerc-dashboard-mine",
+            // tools: ["React JS", "Sass", "API"],
+        },{
+            title: "devfinder",
+            description:
+                "devfinder is a simple app that helps developers find each other using their GitHub usernames. You type in the username and it shows you basic information about the dev. This app uses the GitHub API. It was made with React JS and SASS. Enjoy...and don't forget to check out the light mode!",
+            previewImage: devfinderPreview,
+            link: "https://elijahthis-devfinder.netlify.app/",
+            repo: "https://github.com/elijahthis/devfinder",
+            // tools: ["React JS", "CSS"],
+        },
         {
             title: "Felix Oyeleke Portfolio",
             description:
@@ -51,33 +77,7 @@ const Work = () => {
             repo: "https://github.com/elijahthis/tiny-faces-nft",
             // tools: ["React JS", "Sass", "GSAP"],
         },
-        {
-            title: "NERC Dashboard",
-            description:
-                "Dashboard to manage mytos and discos for the National Electricity Regulatory Commission (NERC). Passcode: 700000",
-            previewImage: NERCPreview,
-            link: "https://nerc-dashboard-mine.netlify.app/",
-            repo: "https://github.com/elijahthis/nerc-dashboard-mine",
-            // tools: ["React JS", "Sass", "API"],
-        },
-        {
-            title: "Tasks Me",
-            description:
-                "One-stop calendar to keep track of all your tasks and events",
-            previewImage: tasksMePreview,
-            link: "https://tasks-me.netlify.app",
-            repo: "https://github.com/elijahthis/tasks-me",
-            // tools: ["React JS", "Sass"],
-        },
-        {
-            title: "devfinder",
-            description:
-                "devfinder is a simple app that helps developers find each other using their GitHub usernames. You type in the username and it shows you basic information about the dev. This app uses the GitHub API. It was made with React JS and SASS. Enjoy...and don't forget to check out the light mode!",
-            previewImage: devfinderPreview,
-            link: "https://elijahthis-devfinder.netlify.app/",
-            repo: "https://github.com/elijahthis/devfinder",
-            // tools: ["React JS", "CSS"],
-        },
+        
         {
             title: "Planets Fact Site",
             description:
