@@ -5,7 +5,7 @@ import Rotate from "react-reveal/Rotate";
 import "../css/Work.css";
 // import "../css/main.css";
 import felixPortfolioPreview from "../images/felix-portfolio.png";
-import NERCPreview from "../images/nerc-dashboard.png";
+// import NERCPreview from "../images/nerc-dashboard.png";
 import tasksMePreview from "../images/tasks-me-preview.png";
 import devfinderPreview from "../images/devfinder-preview.png";
 import veditorPreview from "../images/veditor-preview.png";
@@ -53,15 +53,15 @@ const Work = () => {
             repo: "https://github.com/elijahthis/tasks-me",
             // tools: ["React JS", "Sass"],
         },
-        {
-            title: "NERC Dashboard",
-            description:
-                "Dashboard to manage mytos and discos for the National Electricity Regulatory Commission (NERC). Passcode: 700000",
-            previewImage: NERCPreview,
-            link: "https://nerc-dashboard-mine.netlify.app/",
-            repo: "https://github.com/elijahthis/nerc-dashboard-mine",
-            // tools: ["React JS", "Sass", "API"],
-        },
+        // {
+        //     title: "NERC Dashboard",
+        //     description:
+        //         "Dashboard to manage mytos and discos for the National Electricity Regulatory Commission (NERC). Passcode: 700000",
+        //     previewImage: NERCPreview,
+        //     link: "https://nerc-dashboard-mine.netlify.app/",
+        //     repo: "https://github.com/elijahthis/nerc-dashboard-mine",
+        //     // tools: ["React JS", "Sass", "API"],
+        // },
         {
             title: "devfinder",
             description:
