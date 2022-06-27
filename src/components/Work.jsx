@@ -10,8 +10,8 @@ import tasksMePreview from "../images/tasks-me-preview.png";
 import devfinderPreview from "../images/devfinder-preview.png";
 import veditorPreview from "../images/veditor-preview.png";
 import LiveGistsPreview from "../images/Live-Gists-preview.png";
-import PlanetsFactSitePreview from "../images/Planets-Fact-Site-preview.png";
-import SimplenoteClonePreview from "../images/Simplenote-clone-prevew.png";
+// import PlanetsFactSitePreview from "../images/Planets-Fact-Site-preview.png";
+// import SimplenoteClonePreview from "../images/Simplenote-clone-prevew.png";
 import TinyFacesPreview from "../images/tiny-faces-nft-preview.png";
 import htmlLogo from "../images/html-logo.png";
 import cssLogo from "../images/css-logo.png";
@@ -87,36 +87,6 @@ const Work = () => {
             link: "https://tiny-faces-nft.netlify.app/",
             repo: "https://github.com/elijahthis/tiny-faces-nft",
             // tools: ["React JS", "Sass", "GSAP"],
-        },
-
-        {
-            title: "Planets Fact Site",
-            description:
-                "An 8-page fact site for all planets in our solar system.",
-            previewImage: PlanetsFactSitePreview,
-            link: "https://elijahthis-planet-fact-site.netlify.app/",
-            repo: "https://github.com/elijahthis/planets-fact-site",
-            // tools: ["React JS", "Sass"],
-        },
-        {
-            title: "Simplenote Clone",
-            description: [
-                "Simplenote is a website that allows you to pen down ideas as notes online and access them whenever you want. This is a clone of that website.",
-                <br key={1} />,
-                "UI credit: ",
-                <a
-                    href="https://app.simplenote.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    key={2}
-                >
-                    https://app.simplenote.com
-                </a>,
-            ],
-            previewImage: SimplenoteClonePreview,
-            link: "https://elijahthis-simplenoteclone.netlify.app/",
-            repo: "https://github.com/elijahthis/simplenote-clone",
-            // tools: ["React JS", "Sass"],
         },
     ];
     const skills = [
