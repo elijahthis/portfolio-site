@@ -8,6 +8,7 @@ import felixPortfolioPreview from "../images/felix-portfolio.png";
 import NERCPreview from "../images/nerc-dashboard.png";
 import tasksMePreview from "../images/tasks-me-preview.png";
 import devfinderPreview from "../images/devfinder-preview.png";
+import veditorPreview from "../images/veditor-preview.png";
 import LiveGistsPreview from "../images/Live-Gists-preview.png";
 import PlanetsFactSitePreview from "../images/Planets-Fact-Site-preview.png";
 import SimplenoteClonePreview from "../images/Simplenote-clone-prevew.png";
@@ -26,6 +27,15 @@ import nextjsLogo from "../images/next-black.svg";
 const Work = () => {
     const previousWork = [
         {
+            title: "veditor",
+            description:
+                "veditor is an online realtime video-editing application.",
+            previewImage: veditorPreview,
+            link: "https://vedit-or.netlify.app/",
+            repo: "https://github.com/elijahthis/veditor",
+            // tools: ["React JS", "CSS"],
+        },
+        {
             title: "Live-Gists",
             description:
                 "Live-Gists is an online realtime code collaboration,sharing and social media platform. It supports realtime pair coding with a role based system for editing and viewing. Share code snippets with the click of a button, like others gists, chat with other users and receive notifications on activities and messages through an always online push server, view feed and posts of other users you are following all in one platform.",
@@ -34,7 +44,7 @@ const Work = () => {
             repo: "https://github.com/Regedit-msc/writty_client",
             // tools: ["React JS", "CSS"],
         },
-         {
+        {
             title: "Tasks Me",
             description:
                 "One-stop calendar to keep track of all your tasks and events",
@@ -51,7 +61,8 @@ const Work = () => {
             link: "https://nerc-dashboard-mine.netlify.app/",
             repo: "https://github.com/elijahthis/nerc-dashboard-mine",
             // tools: ["React JS", "Sass", "API"],
-        },{
+        },
+        {
             title: "devfinder",
             description:
                 "devfinder is a simple app that helps developers find each other using their GitHub usernames. You type in the username and it shows you basic information about the dev. This app uses the GitHub API. It was made with React JS and SASS. Enjoy...and don't forget to check out the light mode!",
@@ -77,7 +88,7 @@ const Work = () => {
             repo: "https://github.com/elijahthis/tiny-faces-nft",
             // tools: ["React JS", "Sass", "GSAP"],
         },
-        
+
         {
             title: "Planets Fact Site",
             description:
