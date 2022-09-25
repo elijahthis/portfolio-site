@@ -1,240 +1,246 @@
 @import "config";
 
 @keyframes bounce {
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-60px);
-  }
+	0%,
+	100%,
+	20%,
+	50%,
+	80% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-30px);
+	}
+	60% {
+		transform: translateY(-60px);
+	}
 }
 @keyframes appear {
-  100% {
-    transform: translate3d(0, 0%, 0);
-    opacity: 1;
-  }
+	100% {
+		transform: translate3d(0, 0%, 0);
+		opacity: 1;
+	}
 }
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 :root {
-  font-family: Dosis-Medium;
-  --padding-val: 40px;
+	font-family: Dosis-Medium;
+	--padding-val: 40px;
 }
 .light {
-  --main-col: #000000;
-  --lighter-col: #3d3d3d;
-  --main-bg: #ffffff;
-  --other-col: #3137dc;
+	--main-col: #000000;
+	--lighter-col: #3d3d3d;
+	--main-bg: #ffffff;
+	--other-col: #3137dc;
 }
 .dark {
-  --main-col: #ffffff;
-  --lighter-col: rgba(255, 255, 255, 0.7);
-  --main-bg: #1f1d2b;
-  --other-col: #252836;
+	--main-col: #ffffff;
+	--lighter-col: rgba(255, 255, 255, 0.7);
+	--main-bg: #1f1d2b;
+	--other-col: #252836;
 }
 
 .App {
-  background-color: var(--main-bg);
-  color: var(--main-col);
-  transition: color 1s, background-color 1s;
+	background-color: var(--main-bg);
+	color: var(--main-col);
+	transition: color 1s, background-color 1s;
 }
 
 @media screen and (min-width: 992px) {
-  /* start of desktop styles */
-  h1 {
-    font-family: Nicolatte, monospace;
-    font-size: 80px;
-  }
-  h2 {
-    font-family: Nicolatte, monospace;
-    font-size: 50px;
-    margin: 22px 0px;
-    text-align: center;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  }
-  h3 {
-    font-family: Nicolatte, monospace;
-    font-size: 25px;
-    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
-  }
+	/* start of desktop styles */
+	h1 {
+		font-family: Nicolatte, monospace;
+		font-size: 80px;
+	}
+	h2 {
+		font-family: Nicolatte, monospace;
+		font-size: 50px;
+		margin: 22px 0px;
+		text-align: center;
+		text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+	}
+	h3 {
+		font-family: Nicolatte, monospace;
+		font-size: 25px;
+		text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+	}
 
-  .nav-arrow {
-    position: fixed;
-    top: 90%;
-    left: 90%;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: var(--main-bg);
+	.cv-button {
+		position: fixed;
+		top: 90%;
+		left: 90%;
+	}
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    &:hover {
-      cursor: pointer;
-    }
-    svg {
-      stroke: var(--main-col);
-    }
-    .dot {
-      position: absolute;
-      width: 45px;
-      height: 45px;
-      border: 3px dotted var(--main-col);
-      border-radius: 50%;
-      animation: 7s spin linear infinite;
-      &:hover {
-        border-style: solid;
-        animation-play-state: paused;
-      }
-    }
-  }
+	.nav-arrow {
+		position: fixed;
+		top: 90%;
+		left: 90%;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		background-color: var(--main-bg);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		&:hover {
+			cursor: pointer;
+		}
+		svg {
+			stroke: var(--main-col);
+		}
+		.dot {
+			position: absolute;
+			width: 45px;
+			height: 45px;
+			border: 3px dotted var(--main-col);
+			border-radius: 50%;
+			animation: 7s spin linear infinite;
+			&:hover {
+				border-style: solid;
+				animation-play-state: paused;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 480px) and (max-width: 991px) {
-  /* start of tablet styles */
-  h1 {
-    font-family: Nicolatte, monospace;
-    font-size: 80px;
-    background-color: transparent;
-  }
-  h2 {
-    font-family: Nicolatte, monospace;
-    font-size: 50px;
-    margin: 22px 0px;
-    text-align: center;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-    background-color: transparent;
-  }
-  h3 {
-    font-family: Nicolatte, monospace;
-    font-size: 25px;
-    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
-    background-color: transparent;
-  }
+	/* start of tablet styles */
+	h1 {
+		font-family: Nicolatte, monospace;
+		font-size: 80px;
+		background-color: transparent;
+	}
+	h2 {
+		font-family: Nicolatte, monospace;
+		font-size: 50px;
+		margin: 22px 0px;
+		text-align: center;
+		text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+		background-color: transparent;
+	}
+	h3 {
+		font-family: Nicolatte, monospace;
+		font-size: 25px;
+		text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+		background-color: transparent;
+	}
 
-  .dot-a {
-    position: absolute;
-    top: 90%;
-    left: 90%;
-    .nav-arrow {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 45px;
-      height: 45px;
-    }
-  }
-  .nav-arrow {
-    position: fixed;
-    top: 90%;
-    left: 90%;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+	.dot-a {
+		position: absolute;
+		top: 90%;
+		left: 90%;
+		.nav-arrow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 45px;
+			height: 45px;
+		}
+	}
+	.nav-arrow {
+		position: fixed;
+		top: 90%;
+		left: 90%;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-bg);
-    &:hover {
-      cursor: pointer;
-    }
-    svg {
-      stroke: var(--main-col);
-    }
-    .dot {
-      position: absolute;
-      width: 45px;
-      height: 45px;
-      border: 3px dotted var(--main-col);
-      border-radius: 50%;
-      animation: 7s spin linear infinite;
-      &:hover {
-        border-style: solid;
-        animation-play-state: paused;
-      }
-    }
-  }
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--main-bg);
+		&:hover {
+			cursor: pointer;
+		}
+		svg {
+			stroke: var(--main-col);
+		}
+		.dot {
+			position: absolute;
+			width: 45px;
+			height: 45px;
+			border: 3px dotted var(--main-col);
+			border-radius: 50%;
+			animation: 7s spin linear infinite;
+			&:hover {
+				border-style: solid;
+				animation-play-state: paused;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 479px) {
-  /* start of phone styles */
-  h1 {
-    font-family: Nicolatte, monospace;
-    font-size: 80px;
-  }
-  h2 {
-    font-family: Nicolatte, monospace;
-    font-size: 50px;
-    margin: 22px 0px;
-    text-align: center;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
-  }
-  h3 {
-    font-family: Nicolatte, monospace;
-    font-size: 25px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  }
+	/* start of phone styles */
+	h1 {
+		font-family: Nicolatte, monospace;
+		font-size: 80px;
+	}
+	h2 {
+		font-family: Nicolatte, monospace;
+		font-size: 50px;
+		margin: 22px 0px;
+		text-align: center;
+		text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+	}
+	h3 {
+		font-family: Nicolatte, monospace;
+		font-size: 25px;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	}
 
-  .dot-a {
-    position: absolute;
-    top: 90%;
-    left: 90%;
-    .nav-arrow {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 45px;
-      height: 45px;
-    }
-  }
-  .nav-arrow {
-    position: fixed;
-    top: 90%;
-    left: 80%;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+	.dot-a {
+		position: absolute;
+		top: 90%;
+		left: 90%;
+		.nav-arrow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 45px;
+			height: 45px;
+		}
+	}
+	.nav-arrow {
+		position: fixed;
+		top: 90%;
+		left: 80%;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-bg);
-    &:hover {
-      cursor: pointer;
-    }
-    svg {
-      stroke: var(--main-col);
-    }
-    .dot {
-      position: absolute;
-      width: 45px;
-      height: 45px;
-      border: 3px dotted var(--main-col);
-      border-radius: 50%;
-      animation: 7s spin linear infinite;
-      &:hover {
-        border-style: solid;
-        animation-play-state: paused;
-      }
-    }
-  }
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--main-bg);
+		&:hover {
+			cursor: pointer;
+		}
+		svg {
+			stroke: var(--main-col);
+		}
+		.dot {
+			position: absolute;
+			width: 45px;
+			height: 45px;
+			border: 3px dotted var(--main-col);
+			border-radius: 50%;
+			animation: 7s spin linear infinite;
+			&:hover {
+				border-style: solid;
+				animation-play-state: paused;
+			}
+		}
+	}
 }
