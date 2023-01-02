@@ -11,6 +11,7 @@ import veditorPreview from "../images/veditor-preview.png";
 import LiveGistsPreview from "../images/Live-Gists-preview.png";
 import TinyFacesPreview from "../images/tiny-faces-nft-preview.png";
 import AfricExpayPreview from "../images/africexpay-preview.png";
+import KardinalPreview from "../images/kardinal-preview.png";
 import KnightVenturesPreview from "../images/knight-ventures-preview.png";
 import htmlLogo from "../images/html-logo.png";
 import cssLogo from "../images/css-logo.png";
@@ -35,14 +36,23 @@ const Work = () => {
 			// tools: ["React JS", "CSS"],
 		},
 		{
-			title: "AfricExpay",
+			title: "Kardinal",
 			description:
-				"A fintech solution that provides an easier, cheaper way of paying vendors ",
-			previewImage: AfricExpayPreview,
-			link: "https://africexpay.com/",
+				"An all-in-one platform for booking and managing flights, transportation and other employee experiences",
+			previewImage: KardinalPreview,
+			link: "https://gokardinal.com/",
 			repo: undefined,
 			// tools: ["React JS", "CSS"],
 		},
+		// {
+		// 	title: "AfricExpay",
+		// 	description:
+		// 		"A fintech solution that provides an easier, cheaper way of paying vendors ",
+		// 	previewImage: AfricExpayPreview,
+		// 	link: "https://africexpay.com/",
+		// 	repo: undefined,
+		// 	// tools: ["React JS", "CSS"],
+		// },
 		{
 			title: "Live-Gists",
 			description:
