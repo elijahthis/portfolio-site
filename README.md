@@ -17,7 +17,7 @@ The website was originally made with a splendid monochrome theme. I then impleme
 
 Evaluate the website and don't forget to hit me up if you're interested in working with me, or if you even have any feedback or ideas. Thanks.
 
-Email: **emperorelijah007@gmail.com**
+Email: **hello@elijahthis.com**
 Live site url: [My Portfolio](https://elijahthis.com/)
 
 I'll take a bow now. Enjoy...
