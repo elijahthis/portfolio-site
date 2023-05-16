@@ -62,23 +62,23 @@ const Work = () => {
 			repo: "https://github.com/Regedit-msc/writty_client",
 			// tools: ["React JS", "CSS"],
 		},
-		{
-			title: "Tasks Me",
-			description:
-				"One-stop calendar to keep track of all your tasks and events",
-			previewImage: tasksMePreview,
-			link: "https://tasks-me.netlify.app",
-			repo: "https://github.com/elijahthis/tasks-me",
-			// tools: ["React JS", "Sass"],
-		},
-		{
-			title: "veditor",
-			description: "veditor is an online realtime video-editing application.",
-			previewImage: veditorPreview,
-			link: "https://vedit-or.netlify.app/",
-			repo: "https://github.com/elijahthis/veditor",
-			// tools: ["React JS", "CSS"],
-		},
+		// {
+		// 	title: "Tasks Me",
+		// 	description:
+		// 		"One-stop calendar to keep track of all your tasks and events",
+		// 	previewImage: tasksMePreview,
+		// 	link: "https://tasks-me.netlify.app",
+		// 	repo: "https://github.com/elijahthis/tasks-me",
+		// 	// tools: ["React JS", "Sass"],
+		// },
+		// {
+		// 	title: "veditor",
+		// 	description: "veditor is an online realtime video-editing application.",
+		// 	previewImage: veditorPreview,
+		// 	link: "https://vedit-or.netlify.app/",
+		// 	repo: "https://github.com/elijahthis/veditor",
+		// 	// tools: ["React JS", "CSS"],
+		// },
 		// {
 		// 	title: "devfinder",
 		// 	description:
@@ -97,14 +97,14 @@ const Work = () => {
 		// 	repo: "https://github.com/elijahthis/felix-oyeleke-portfolio",
 		// 	// tools: ["Next JS", "Sass"],
 		// },
-		{
-			title: "TinyFaces NFT",
-			description: "A landing page created for an NFT platform",
-			previewImage: TinyFacesPreview,
-			link: "https://tiny-faces-nft.netlify.app/",
-			repo: "https://github.com/elijahthis/tiny-faces-nft",
-			// tools: ["React JS", "Sass", "GSAP"],
-		},
+		// {
+		// 	title: "TinyFaces NFT",
+		// 	description: "A landing page created for an NFT platform",
+		// 	previewImage: TinyFacesPreview,
+		// 	link: "https://tiny-faces-nft.netlify.app/",
+		// 	repo: "https://github.com/elijahthis/tiny-faces-nft",
+		// 	// tools: ["React JS", "Sass", "GSAP"],
+		// },
 	];
 	const skills = [
 		["JavaScript", javascriptLogo],
