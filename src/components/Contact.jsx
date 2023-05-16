@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
-import Rotate from "react-reveal/Rotate";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
 import { NavContext } from "../Contexts/NavContext";
 import "../css/Contact.css";
 import { Link } from "react-router-dom";
@@ -85,15 +85,15 @@ const Contact = () => {
 	return (
 		<>
 			<section className="contact-section" id="Contact" name="Contact">
-				<Rotate bottom left duration={700}>
+				<Fade bottom left duration={700}>
 					<h2>Work with me!</h2>
-				</Rotate>
-				<Rotate bottom left duration={700} delay={700}>
+				</Fade>
+				<Fade bottom left duration={700} delay={700}>
 					<p className="collab">
 						Do you have a question, proposal or idea you would like us to
 						collaborate on? Hit me up...
 					</p>
-				</Rotate>
+				</Fade>
 				<form onSubmit={sendEmail}>
 					<div>
 						<Zoom right duration={700} delay={1400}>

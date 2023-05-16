@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Zoom from "react-reveal/Zoom";
-import Rotate from "react-reveal/Rotate";
+import Fade from "react-reveal/Fade";
 import "../css/Work.css";
 // import "../css/main.css";
 import felixPortfolioPreview from "../images/felix-portfolio.png";
@@ -129,9 +129,9 @@ const Work = () => {
 	return (
 		<>
 			<div className="my-work" id="Work" name="Work">
-				<Rotate bottom left duration={700}>
+				<Fade bottom left duration={700}>
 					<h2>My work</h2>
-				</Rotate>
+				</Fade>
 
 				<div>
 					<div className="work-items">

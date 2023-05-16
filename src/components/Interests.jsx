@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { NavContext } from "../Contexts/NavContext";
 import { Link } from "react-router-dom";
 import "../css/Interests.css";
-import Rotate from "react-reveal/Rotate";
+import Fade from "react-reveal/Fade";
 import HP3 from "../images/HP-prisoner-of-azkaban.jpg";
 import MV5 from "../images/big-bang-theory.png";
 import cKay from "../images/ckay.jpg";
@@ -19,9 +19,9 @@ const Interests = () => {
 	return (
 		<>
 			<section className="interests-section" id="Interests" name="Interests">
-				<Rotate bottom left duration={700}>
+				<Fade bottom left duration={700}>
 					<h2>I like to...</h2>
-				</Rotate>
+				</Fade>
 				<div className="interests-grid">
 					<div className="coding">
 						<div className="img-wrap">

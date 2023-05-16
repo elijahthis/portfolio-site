@@ -65,7 +65,7 @@ const Home = () => {
 				<div className="about-div">
 					<div>
 						<p className="about-text">
-							<span>Based in Lagos, Nigeria</span>
+							<span>Loves to work on interesting projects</span>
 						</p>
 					</div>
 					<div>
