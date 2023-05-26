@@ -19,7 +19,7 @@ const Interests = () => {
 	return (
 		<>
 			<section className="interests-section" id="Interests" name="Interests">
-				<Fade bottom left duration={700}>
+				<Fade bottom duration={700}>
 					<h2>I like to...</h2>
 				</Fade>
 				<div className="interests-grid">

@@ -129,14 +129,14 @@ const Work = () => {
 	return (
 		<>
 			<div className="my-work" id="Work" name="Work">
-				<Fade bottom left duration={700}>
+				<Fade bottom duration={700}>
 					<h2>My work</h2>
 				</Fade>
 
 				<div>
 					<div className="work-items">
 						{previousWork.map((workitem, ind) => (
-							<Zoom right delay={700 + 500 * ind} key={ind}>
+							<Fade bottom delay={700 + 500 * ind} key={ind}>
 								<div>
 									<a
 										href={workitem.link}
@@ -151,10 +151,10 @@ const Work = () => {
 									<h3>{workitem.title}</h3>
 									<p>{workitem.description}</p>
 								</div>
-							</Zoom>
+							</Fade>
 						))}
 					</div>
-					<Zoom right>
+					<Fade bottom>
 						<div className="skills" id="skills">
 							<ul className="skills-list">
 								{skills.map((skill, ind) => (
@@ -162,7 +162,7 @@ const Work = () => {
 								))}
 							</ul>
 						</div>
-					</Zoom>
+					</Fade>
 
 					{/* <Link to="#contact">
 						<div className="nav-arrow">
@@ -175,7 +175,7 @@ const Work = () => {
 				</div>
 				<div className="mobile-work">
 					{previousWork.map((workitem, ind) => (
-						<Zoom right delay={700} key={ind}>
+						<Fade bottom delay={700} key={ind}>
 							<div>
 								<div className="img-border">
 									<img
@@ -201,9 +201,9 @@ const Work = () => {
 								</div>
 								<hr />
 							</div>
-						</Zoom>
+						</Fade>
 					))}
-					<Zoom right>
+					<Fade bottom>
 						<div className="skills">
 							<h3>Skills</h3>
 							<div className="skills-main">
@@ -214,7 +214,7 @@ const Work = () => {
 								</ul>
 							</div>
 						</div>
-					</Zoom>
+					</Fade>
 					{/* <Link to="/contact">
 						<div className="nav-arrow">
 							<svg width="6" height="8" style={{ transform: "scale(3)" }}>

@@ -85,10 +85,10 @@ const Contact = () => {
 	return (
 		<>
 			<section className="contact-section" id="Contact" name="Contact">
-				<Fade bottom left duration={700}>
+				<Fade bottom duration={700}>
 					<h2>Work with me!</h2>
 				</Fade>
-				<Fade bottom left duration={700} delay={700}>
+				<Fade bottom duration={700} delay={700}>
 					<p className="collab">
 						Do you have a question, proposal or idea you would like us to
 						collaborate on? Hit me up...
@@ -96,7 +96,7 @@ const Contact = () => {
 				</Fade>
 				<form onSubmit={sendEmail}>
 					<div>
-						<Zoom right duration={700} delay={1400}>
+						<Fade bottom duration={700} delay={1400}>
 							<label>
 								Name
 								<input
@@ -106,8 +106,8 @@ const Contact = () => {
 									required
 								/>
 							</label>
-						</Zoom>
-						<Zoom right delay={1900}>
+						</Fade>
+						<Fade bottom delay={1900}>
 							<label>
 								Email Address
 								<input
@@ -117,9 +117,9 @@ const Contact = () => {
 									required
 								/>
 							</label>
-						</Zoom>
+						</Fade>
 					</div>
-					<Zoom right delay={2400}>
+					<Fade bottom delay={2400}>
 						<div>
 							<label>
 								Message
@@ -131,8 +131,8 @@ const Contact = () => {
 								></textarea>
 							</label>
 						</div>
-					</Zoom>
-					<Zoom right delay={2900}>
+					</Fade>
+					<Fade bottom delay={2900}>
 						<span className="btn">
 							<div style={{ margin: 0 }}>Send Message</div>
 							<svg
@@ -150,7 +150,7 @@ const Contact = () => {
 							</svg>
 							<input type="submit" name="submit" value="Send Message" />
 						</span>
-					</Zoom>
+					</Fade>
 				</form>
 				<Slide bottom delay={3000} duration={400}>
 					<div className="contacts">
